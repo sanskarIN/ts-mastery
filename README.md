@@ -2,11 +2,17 @@
 
 A public companion-code repository for the **TypeScript Full Mastery — Complete 120-Part Master Edition** by **Ram Sandesh**.
 
+> ## 📘 Get the Complete TypeScript Full Mastery eBook
+> **Gumroad Store:** **https://ramsandesh.gumroad.com**
+>
+> Visit the official Gumroad storefront for the complete book and future publication releases.
+
 This repository is intentionally focused on **source code, exercises, small reusable examples, tests, and companion projects**. The complete commercial book text, merged PDF, merged DOCX, cover artwork, and other publication assets are **not** included in this public-code repository.
 
 ## Repository
 
 - GitHub: https://github.com/sanskarIN/ts-mastery
+- **Official Gumroad Store: https://ramsandesh.gumroad.com**
 - Author: Ram Sandesh
 - Code license: MIT
 
@@ -43,6 +49,8 @@ scripts/         Repository-wide verification helpers
 
 Start with [`docs/PARTS_INDEX.md`](docs/PARTS_INDEX.md). Each part has a matching folder under `parts/part-XXX-*`.
 
+> **📚 Looking for the complete eBook? Visit https://ramsandesh.gumroad.com**
+
 ## Licensing
 
 - Source code: see [`LICENSE`](LICENSE) (MIT).
@@ -63,3 +71,7 @@ npm run build
 ## Security
 
 Please do not publish secrets, API keys, access tokens, production credentials, private datasets, or copied proprietary code. See [`SECURITY.md`](SECURITY.md).
+
+---
+
+**📘 TypeScript Full Mastery Store:** **https://ramsandesh.gumroad.com**
