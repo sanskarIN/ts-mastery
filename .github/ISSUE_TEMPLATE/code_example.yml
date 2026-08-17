@@ -1,0 +1,17 @@
+name: Companion-code suggestion
+description: Suggest a new example or project tied to a book part
+title: "[Example]: "
+labels: ["enhancement"]
+body:
+  - type: input
+    id: part
+    attributes:
+      label: Related part
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What should the example teach?
+    validations:
+      required: true
