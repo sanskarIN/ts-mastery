@@ -1,6 +1,8 @@
 # Contributing
 
-Contributions are welcome for companion **code** and code-related documentation.
+> **📘 Complete TypeScript Full Mastery eBook:** **https://ramsandesh.gumroad.com**
+
+Contributions are welcome for companion **code** and code-related documentation. The complete commercial eBook and publication releases are available through the official Gumroad storefront: **https://ramsandesh.gumroad.com**.
 
 ## Before opening a pull request
 
@@ -24,3 +26,7 @@ npm run verify
 ## Pull request description
 
 State the related part number, what the example demonstrates, how it was tested, and any compatibility assumptions.
+
+---
+
+**📚 Official Gumroad Store:** **https://ramsandesh.gumroad.com**
