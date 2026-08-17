@@ -1,0 +1,39 @@
+{
+  "series": "TypeScript Full Mastery",
+  "author": "Ram Sandesh",
+  "repository": "https://github.com/sanskarIN/ts-mastery",
+  "totalParts": 120,
+  "partFolderPattern": "parts/part-XXX-*",
+  "policy": "Public companion source code and concise code documentation only; commercial book PDF/DOCX/manuscripts are excluded.",
+  "runnableGroups": [
+    {
+      "path": "examples/01-foundations",
+      "purpose": "Foundations, typed functions, normalization and tests"
+    },
+    {
+      "path": "examples/02-type-design",
+      "purpose": "Discriminated unions, unknown input and result modeling"
+    },
+    {
+      "path": "examples/03-async-control",
+      "purpose": "Bounded concurrency and ordered async results"
+    },
+    {
+      "path": "projects/study-progress-cli",
+      "purpose": "120-part study progress domain and CLI"
+    },
+    {
+      "path": "projects/runtime-config",
+      "purpose": "Runtime environment validation before typed use"
+    },
+    {
+      "path": "projects/workflow-state-machine",
+      "purpose": "Explicit durable workflow states and transitions"
+    }
+  ],
+  "validation": {
+    "initialAutomatedTestsPassed": 9,
+    "initialAutomatedTestsFailed": 0,
+    "strictTypeScript": true
+  }
+}
