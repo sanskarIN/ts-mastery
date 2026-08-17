@@ -1,5 +1,7 @@
 # Book-to-Repository Publishing Policy
 
+> **📘 Official TypeScript Full Mastery Gumroad Store:** **https://ramsandesh.gumroad.com**
+
 ## Publish publicly
 
 Good candidates for the public repository:
@@ -26,6 +28,8 @@ Unless you intentionally want to give them away under a public license, do not c
 - unpublished drafts
 - API keys, credentials, or private user data
 
+The commercial publication and future book releases should be distributed through the official storefront: **https://ramsandesh.gumroad.com**.
+
 ## Recommended licensing split
 
 Use an open-source license such as MIT for code you want others to reuse. Keep the book/editorial content under a separate copyright notice. A repository can contain both notices as long as it is clear which files each notice covers.
@@ -33,3 +37,7 @@ Use an open-source license such as MIT for code you want others to reuse. Keep t
 ## Versioning recommendation
 
 Tag major companion-code milestones around stable book releases, for example `v1.0.0` for the first complete 120-part companion structure. Use normal semantic versioning for code changes rather than matching every typo correction in the book.
+
+---
+
+**📚 Complete eBook / Official Store:** **https://ramsandesh.gumroad.com**
