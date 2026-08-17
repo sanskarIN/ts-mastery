@@ -1,0 +1,30 @@
+{
+  "name": "typescript-full-mastery-companion",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Companion code for the TypeScript Full Mastery 120-part series.",
+  "type": "module",
+  "scripts": {
+    "clean": "node scripts/clean.mjs",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/**/*.test.js",
+    "verify": "npm run check && npm test"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanskarIN/ts-mastery.git"
+  },
+  "homepage": "https://github.com/sanskarIN/ts-mastery#readme",
+  "bugs": {
+    "url": "https://github.com/sanskarIN/ts-mastery/issues"
+  }
+}
