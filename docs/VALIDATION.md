@@ -1,5 +1,7 @@
 # Validation Record
 
+> **📘 Complete TypeScript Full Mastery eBook:** **https://ramsandesh.gumroad.com**
+
 The initial GitHub-ready companion package was locally checked with the available Node.js and TypeScript compiler environment.
 
 ## Initial result
@@ -20,3 +22,7 @@ For a normal clone, install the declared development dependencies first, then ru
 npm install
 npm run verify
 ```
+
+---
+
+**📚 Official Gumroad Store:** **https://ramsandesh.gumroad.com**
