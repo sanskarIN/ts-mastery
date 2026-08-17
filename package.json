@@ -24,6 +24,7 @@
     "url": "git+https://github.com/sanskarIN/ts-mastery.git"
   },
   "homepage": "https://github.com/sanskarIN/ts-mastery#readme",
+  "funding": "https://ramsandesh.gumroad.com",
   "bugs": {
     "url": "https://github.com/sanskarIN/ts-mastery/issues"
   }
