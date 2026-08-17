@@ -2,6 +2,7 @@
   "series": "TypeScript Full Mastery",
   "author": "Ram Sandesh",
   "repository": "https://github.com/sanskarIN/ts-mastery",
+  "gumroadStore": "https://ramsandesh.gumroad.com",
   "totalParts": 120,
   "partFolderPattern": "parts/part-XXX-*",
   "policy": "Public companion source code and concise code documentation only; commercial book PDF/DOCX/manuscripts are excluded.",
