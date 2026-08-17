@@ -1,11 +1,20 @@
 # Part 113 — TypeScript Data Quality and Observability Engineering: Contracts, Profiling, Anomaly Detection, and Trustworthy Data Products
 
+> ## 📘 Complete eBook on Gumroad
+> **Official Store:** **https://ramsandesh.gumroad.com**
+>
+> Get the complete *TypeScript Full Mastery* eBook and future publication releases from the official Gumroad storefront.
+
 **Book mapping:** TypeScript Full Mastery, Part 113.
 
 ## Public companion scope
 
-Use this folder for data-quality/observability code artifacts, tests, concise review notes, and links to larger companion projects. Keep commercial book text and publication files out of the public repository.
+Use this folder for runnable TypeScript code, tests, exercises, concise setup notes, and links to larger companion projects related to this part. Keep the complete commercial chapter text, PDF/DOCX publication pages, private data, secrets, and unlicensed third-party assets out of the public repository.
 
 ## Suggested code artifact
 
-Typed data-contract and anomaly-evidence exercise.
+Enterprise platform/reliability simulation or architecture-as-code example.
+
+---
+
+**📚 TypeScript Full Mastery Store:** **https://ramsandesh.gumroad.com**
