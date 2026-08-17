@@ -1,5 +1,8 @@
 # Parts 1–120 Code Index
 
+> ## 📘 Complete eBook on Gumroad
+> **Official Store:** **https://ramsandesh.gumroad.com**
+
 This repository contains a public companion folder for **every Part 001–120** of *TypeScript Full Mastery*. The complete commercial chapter text and publication PDF/DOCX files are intentionally not included.
 
 Browse the complete folder collection at [`parts/`](../parts/). Every folder begins with a stable zero-padded part number such as `part-001-...`, `part-060-...`, or `part-120-...`, so the curriculum remains sortable and easy to navigate.
@@ -48,3 +51,7 @@ Examples:
 - [`projects/workflow-state-machine`](../projects/workflow-state-machine/)
 
 The part folders are intentionally lightweight navigation anchors. Larger runnable projects should live under `examples/` or `projects/` and be linked from the relevant part folder rather than duplicating the same source tree many times.
+
+---
+
+**📚 TypeScript Full Mastery Store:** **https://ramsandesh.gumroad.com**
