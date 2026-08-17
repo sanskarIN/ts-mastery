@@ -1,11 +1,20 @@
 # Part 080 — Turf.js with TypeScript: Geospatial Analysis, Spatial Operations, Validation, Performance, and Production Workflows
 
+> ## 📘 Complete eBook on Gumroad
+> **Official Store:** **https://ramsandesh.gumroad.com**
+>
+> Get the complete *TypeScript Full Mastery* eBook and future publication releases from the official Gumroad storefront.
+
 **Book mapping:** TypeScript Full Mastery, Part 80.
 
 ## Public companion scope
 
-Use this folder for runnable geospatial examples, tests, concise setup notes, and links to larger companion projects. Keep commercial book text and publication files out of the public repository.
+Use this folder for runnable TypeScript code, tests, exercises, concise setup notes, and links to larger companion projects related to this part. Keep the complete commercial chapter text, PDF/DOCX publication pages, private data, secrets, and unlicensed third-party assets out of the public repository.
 
 ## Suggested code artifact
 
-Typed GeoJSON validation and spatial-analysis exercise.
+Geospatial/data pipeline companion module.
+
+---
+
+**📚 TypeScript Full Mastery Store:** **https://ramsandesh.gumroad.com**
