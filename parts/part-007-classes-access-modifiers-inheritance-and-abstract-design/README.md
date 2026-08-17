@@ -1,21 +1,20 @@
 # Part 007 — Classes, Access Modifiers, Inheritance, and Abstract Design
 
+> ## 📘 Complete eBook on Gumroad
+> **Official Store:** **https://ramsandesh.gumroad.com**
+>
+> Get the complete *TypeScript Full Mastery* eBook and future publication releases from the official Gumroad storefront.
+
 **Book mapping:** TypeScript Full Mastery, Part 7.
 
-## What belongs in this public folder
+## Public companion scope
 
-- runnable source code directly related to this part
-- tests and fixtures
-- concise setup/usage notes
-- links to larger companion projects when appropriate
-
-## What should not be copied here
-
-- the complete chapter text
-- full PDF/DOCX pages from the commercial edition
-- copyrighted third-party assets without permission
-- secrets, production credentials, or private data
+Use this folder for runnable TypeScript code, tests, exercises, concise setup notes, and links to larger companion projects related to this part. Keep the complete commercial chapter text, PDF/DOCX publication pages, private data, secrets, and unlicensed third-party assets out of the public repository.
 
 ## Suggested code artifact
 
-Class and domain-model design exercise + tests.
+Small language example + tests.
+
+---
+
+**📚 TypeScript Full Mastery Store:** **https://ramsandesh.gumroad.com**
