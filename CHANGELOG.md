@@ -4,6 +4,18 @@
 
 All notable changes to the public companion-code repository are documented here.
 
+## Second companion project expansion
+
+- Added a generic LRU cache with deterministic least-recently-used eviction.
+- Added an idempotency store that deduplicates repeated async work by key and allows retries after failures.
+- Added a strongly typed command bus with register, dispatch, unregister, and duplicate-handler protection.
+- Added a composable validation pipeline with discriminated-union results and reusable validators.
+- Added a stable priority task queue with deterministic ordering for equal priorities.
+- Added opaque cursor pagination with safe decoding and forward-page navigation.
+- Added **18 new automated tests** across these six projects.
+- Fixed an `exactOptionalPropertyTypes` issue found by strict validation before finalizing the expansion.
+- Updated repository navigation, machine-readable catalog, build summary, and validation records.
+
 ## Companion project expansion
 
 - Added a strongly typed event bus with subscription and one-shot listener tests.
