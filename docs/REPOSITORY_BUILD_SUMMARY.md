@@ -3,9 +3,9 @@
 > **📘 Complete TypeScript Full Mastery eBook:** **https://ramsandesh.gumroad.com**
 
 - Part navigation folders: 120
-- Working example/project groups: 14
+- Working example/project groups: 20
 - Focused examples: 3
-- Larger companion projects: 11
+- Larger companion projects: 17
 - Code license: MIT
 - Book content license: separate all-rights-reserved notice
 - CI workflow: included
@@ -33,6 +33,16 @@
 - `projects/dependency-graph`
 - `projects/token-bucket-rate-limiter`
 - `projects/geojson-guard`
+- `projects/lru-cache`
+- `projects/idempotency-store`
+- `projects/command-bus`
+- `projects/validation-pipeline`
+- `projects/priority-task-queue`
+- `projects/cursor-pagination`
+
+## Latest expansion validation
+
+The six newest projects compile under the repository's strict TypeScript rules and add **18 passing tests**. They were checked independently before the repository-wide metadata was updated.
 
 ---
 
