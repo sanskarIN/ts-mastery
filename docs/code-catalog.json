@@ -7,30 +7,20 @@
   "partFolderPattern": "parts/part-XXX-*",
   "policy": "Public companion source code and concise code documentation only; commercial book PDF/DOCX/manuscripts are excluded.",
   "runnableGroups": [
-    {
-      "path": "examples/01-foundations",
-      "purpose": "Foundations, typed functions, normalization and tests"
-    },
-    {
-      "path": "examples/02-type-design",
-      "purpose": "Discriminated unions, unknown input and result modeling"
-    },
-    {
-      "path": "examples/03-async-control",
-      "purpose": "Bounded concurrency and ordered async results"
-    },
-    {
-      "path": "projects/study-progress-cli",
-      "purpose": "120-part study progress domain and CLI"
-    },
-    {
-      "path": "projects/runtime-config",
-      "purpose": "Runtime environment validation before typed use"
-    },
-    {
-      "path": "projects/workflow-state-machine",
-      "purpose": "Explicit durable workflow states and transitions"
-    }
+    { "path": "examples/01-foundations", "purpose": "Foundations, typed functions, normalization and tests" },
+    { "path": "examples/02-type-design", "purpose": "Discriminated unions, unknown input and result modeling" },
+    { "path": "examples/03-async-control", "purpose": "Bounded concurrency and ordered async results" },
+    { "path": "projects/study-progress-cli", "purpose": "120-part study progress domain and CLI" },
+    { "path": "projects/runtime-config", "purpose": "Runtime environment validation before typed use" },
+    { "path": "projects/workflow-state-machine", "purpose": "Explicit durable workflow states and transitions" },
+    { "path": "projects/typed-event-bus", "purpose": "Strongly typed event subscriptions, emission and one-shot listeners" },
+    { "path": "projects/ttl-cache", "purpose": "Generic in-memory cache with deterministic TTL expiry" },
+    { "path": "projects/retry-policy", "purpose": "Bounded asynchronous retries with exponential backoff" },
+    { "path": "projects/circuit-breaker", "purpose": "Closed, open and half-open resilience state transitions" },
+    { "path": "projects/feature-flags", "purpose": "Deterministic percentage rollouts and feature gating" },
+    { "path": "projects/dependency-graph", "purpose": "Topological ordering and dependency cycle detection" },
+    { "path": "projects/token-bucket-rate-limiter", "purpose": "Token-bucket request limiting with deterministic refill" },
+    { "path": "projects/geojson-guard", "purpose": "Runtime-safe GeoJSON Point Feature validation" }
   ],
   "validation": {
     "initialAutomatedTestsPassed": 9,
