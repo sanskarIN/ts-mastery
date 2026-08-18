@@ -23,6 +23,12 @@ This matrix maps the larger runnable projects to the TypeScript Full Mastery cur
 | [`validation-pipeline`](../projects/validation-pipeline/) | composable validation, result unions, boundary safety | 12, 25–30 |
 | [`priority-task-queue`](../projects/priority-task-queue/) | scheduling, workers, orchestration, stable priority | 13, 47, 115–120 |
 | [`cursor-pagination`](../projects/cursor-pagination/) | API contracts, opaque cursors, GraphQL connections | 25–26, 48–50 |
+| [`bulkhead-limiter`](../projects/bulkhead-limiter/) | concurrency isolation, overload rejection, queue bounds | 98, 114–120 |
+| [`outbox-store`](../projects/outbox-store/) | transactional outbox concepts, publication tracking, reliable events | 23, 115–117 |
+| [`middleware-pipeline`](../projects/middleware-pipeline/) | typed middleware, async composition, request pipelines | 25, 29–30, 50 |
+| [`bounding-box`](../projects/bounding-box/) | geometry bounds, containment, intersection, geospatial primitives | 80–84, 93–95 |
+| [`health-check-aggregator`](../projects/health-check-aggregator/) | health/readiness states, async checks, SRE endpoints | 98, 114, 120 |
+| [`dag-task-runner`](../projects/dag-task-runner/) | DAGs, dependency layers, parallel task execution, cycle detection | 106–107, 115, 118–120 |
 
 ## How to use this matrix
 
