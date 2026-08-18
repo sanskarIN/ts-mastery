@@ -11,13 +11,14 @@
 
 Use this folder for runnable TypeScript code, tests, exercises, concise setup notes, and links to larger companion projects related to this part. Keep the complete commercial chapter text, PDF/DOCX publication pages, private data, secrets, and unlicensed third-party assets out of the public repository.
 
-## Runnable companion project
+## Runnable companion projects
 
 - [`typed-event-bus`](../../projects/typed-event-bus/) — strongly typed subscriptions, event payloads, one-shot listeners, and unsubscribe behavior.
+- [`idempotency-store`](../../projects/idempotency-store/) — deduplicate repeated message/job processing by key and permit retry after failed work.
 
 ## Suggested code artifact
 
-Extend the event bus with delivery metadata, dead-letter handling, or asynchronous handlers while preserving typed event contracts.
+Combine typed event contracts with idempotent consumers, delivery metadata, dead-letter handling, or asynchronous handlers.
 
 ---
 
