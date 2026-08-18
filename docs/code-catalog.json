@@ -24,7 +24,10 @@
   ],
   "validation": {
     "initialAutomatedTestsPassed": 9,
-    "initialAutomatedTestsFailed": 0,
-    "strictTypeScript": true
+    "latestAutomatedTestsPassed": 29,
+    "latestAutomatedTestsFailed": 0,
+    "strictTypeScript": true,
+    "latestStrictTypeScriptCheckPassed": true,
+    "latestBuildPassed": true
   }
 }
