@@ -18,14 +18,6 @@ This repository is intentionally focused on **source code, exercises, small reus
 - Author: Ram Sandesh
 - Code license: MIT
 
-## Repository goals
-
-- Give readers runnable TypeScript examples tied to Parts 1–120.
-- Keep examples small enough to learn from and production-minded enough to teach good habits.
-- Provide tests and strict compiler settings instead of copy-paste-only snippets.
-- Separate the open-source code license from the book-content copyright.
-- Make it easy to add larger companion projects without turning the repository into one giant application.
-
 ## Quick start
 
 ```bash
@@ -33,24 +25,22 @@ npm install
 npm run verify
 ```
 
-`npm run verify` checks the 120-part repository structure, strict TypeScript compilation, the project build, and automated tests.
-
-Node.js and TypeScript versions change over time. Use a currently supported Node.js release and install the development dependencies declared in `package.json`.
+`npm run verify` checks the 120-part repository structure, catalog paths, strict TypeScript compilation, the project build, and automated tests. GitHub Actions runs the same verification on Node.js 20 and 22.
 
 ## Structure
 
 ```text
 examples/        Small focused examples
-projects/        Larger runnable companion projects
+projects/        23 larger runnable companion projects
 parts/           Part-by-part navigation for Parts 001–120
-docs/            Book-to-repository policy, project matrix, catalog, and contribution notes
+docs/            Project matrix, testing guide, catalog, standards, and publishing boundaries
 scripts/         Repository-wide verification helpers
 assets/          Repository-owned visual assets
 ```
 
 ## Runnable companion projects
 
-See the dedicated [`projects/README.md`](projects/README.md) landing page and [`docs/PROJECT_MATRIX.md`](docs/PROJECT_MATRIX.md) curriculum map.
+See [`projects/README.md`](projects/README.md) for the categorized landing page and [`docs/PROJECT_MATRIX.md`](docs/PROJECT_MATRIX.md) for curriculum mapping.
 
 - [`study-progress-cli`](projects/study-progress-cli/) — study progress domain and CLI
 - [`runtime-config`](projects/runtime-config/) — runtime environment validation
@@ -63,39 +53,36 @@ See the dedicated [`projects/README.md`](projects/README.md) landing page and [`
 - [`dependency-graph`](projects/dependency-graph/) — topological ordering and cycle detection
 - [`token-bucket-rate-limiter`](projects/token-bucket-rate-limiter/) — rate limiting with refillable tokens
 - [`geojson-guard`](projects/geojson-guard/) — runtime-safe GeoJSON Point validation
-- [`lru-cache`](projects/lru-cache/) — generic least-recently-used eviction cache
-- [`idempotency-store`](projects/idempotency-store/) — deduplicated request/job execution by key
+- [`lru-cache`](projects/lru-cache/) — least-recently-used eviction cache
+- [`idempotency-store`](projects/idempotency-store/) — deduplicated request/job execution
 - [`command-bus`](projects/command-bus/) — strongly typed command dispatch
-- [`validation-pipeline`](projects/validation-pipeline/) — composable typed validation rules
-- [`priority-task-queue`](projects/priority-task-queue/) — stable priority scheduling queue
-- [`cursor-pagination`](projects/cursor-pagination/) — opaque cursor pagination for APIs
+- [`validation-pipeline`](projects/validation-pipeline/) — composable validation rules
+- [`priority-task-queue`](projects/priority-task-queue/) — stable priority scheduling
+- [`cursor-pagination`](projects/cursor-pagination/) — opaque cursor pagination
+- [`bulkhead-limiter`](projects/bulkhead-limiter/) — bounded concurrent work and overload protection
+- [`outbox-store`](projects/outbox-store/) — reliable messaging outbox simulation
+- [`middleware-pipeline`](projects/middleware-pipeline/) — typed onion-style middleware composition
+- [`bounding-box`](projects/bounding-box/) — geospatial bounding-box utilities
+- [`health-check-aggregator`](projects/health-check-aggregator/) — typed readiness/health aggregation
+- [`dag-task-runner`](projects/dag-task-runner/) — dependency-aware task execution
 
 ## Book ↔ code navigation
 
-Start with [`docs/PARTS_INDEX.md`](docs/PARTS_INDEX.md). Each part has a matching folder under `parts/part-XXX-*`.
+Start with [`docs/PARTS_INDEX.md`](docs/PARTS_INDEX.md). Each book part has a matching folder under `parts/part-XXX-*` and relevant parts link directly to runnable projects.
 
-> **📚 Looking for the complete eBook? Visit https://ramsandesh.gumroad.com**
+## Repository standards
+
+- [`docs/PROJECT_STANDARDS.md`](docs/PROJECT_STANDARDS.md)
+- [`docs/TESTING_GUIDE.md`](docs/TESTING_GUIDE.md)
+- [`CONTRIBUTING.md`](CONTRIBUTING.md)
+- [`SECURITY.md`](SECURITY.md)
 
 ## Licensing
 
-- Source code: see [`LICENSE`](LICENSE) (MIT).
-- Book text, explanations, cover, PDF/DOCX publication files, and other editorial assets: see [`BOOK_CONTENT_LICENSE.md`](BOOK_CONTENT_LICENSE.md).
+- Source code: [`LICENSE`](LICENSE) (MIT).
+- Book/editorial content: [`BOOK_CONTENT_LICENSE.md`](BOOK_CONTENT_LICENSE.md).
 
-These are deliberately separate. Publishing code under MIT does **not** place the book itself under MIT.
-
-## Quality rule
-
-Every code contribution should pass:
-
-```bash
-npm run verify
-```
-
-GitHub Actions runs the same verification across the supported Node.js CI matrix.
-
-## Security
-
-Please do not publish secrets, API keys, access tokens, production credentials, private datasets, or copied proprietary code. See [`SECURITY.md`](SECURITY.md).
+Publishing code under MIT does **not** place the commercial book itself under MIT.
 
 ---
 
