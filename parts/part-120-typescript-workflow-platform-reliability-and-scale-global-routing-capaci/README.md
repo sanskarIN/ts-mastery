@@ -11,9 +11,15 @@
 
 Use this folder for runnable TypeScript code, tests, exercises, concise setup notes, and links to larger companion projects related to this part. Keep the complete commercial chapter text, PDF/DOCX publication pages, private data, secrets, and unlicensed third-party assets out of the public repository.
 
+## Runnable companion projects
+
+- [`feature-flags`](../../projects/feature-flags/) — deterministic rollout percentages for safer staged upgrades.
+- [`circuit-breaker`](../../projects/circuit-breaker/) — failure isolation and recovery probes.
+- [`token-bucket-rate-limiter`](../../projects/token-bucket-rate-limiter/) — capacity protection under load.
+
 ## Suggested code artifact
 
-Enterprise platform/reliability simulation or architecture-as-code example.
+Compose staged rollout, circuit breaking, and rate limiting into a small deployment-safety simulation and test failure/recovery paths.
 
 ---
 
