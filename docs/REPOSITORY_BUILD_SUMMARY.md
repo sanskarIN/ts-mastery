@@ -3,46 +3,32 @@
 > **📘 Complete TypeScript Full Mastery eBook:** **https://ramsandesh.gumroad.com**
 
 - Part navigation folders: 120
-- Working example/project groups: 20
+- Working example/project groups: 26
 - Focused examples: 3
-- Larger companion projects: 17
+- Larger companion projects: 23
 - Code license: MIT
 - Book content license: separate all-rights-reserved notice
-- CI workflow: included
-- Issue/PR templates: included
+- CI workflow: Node.js 20 and 22 verification matrix
+- Automated structure/catalog verification: included
+- Issue/PR templates and CODEOWNERS: included
 - Official Gumroad storefront: **https://ramsandesh.gumroad.com**
 
-## Current runnable code groups
+## Current project groups
 
-### Examples
+The complete categorized list lives in [`../projects/README.md`](../projects/README.md), while curriculum mapping lives in [`PROJECT_MATRIX.md`](PROJECT_MATRIX.md).
 
-- `examples/01-foundations`
-- `examples/02-type-design`
-- `examples/03-async-control`
+## Validation milestones
 
-### Projects
+- Initial runnable suite: **9 passing tests**
+- First expanded complete suite: **29 passing tests**
+- Second expansion: **18 additional passing tests**
+- Third expansion: **18 additional passing tests**
+- Current expected repository total: **65 tests**
+- Third expansion strict TypeScript compilation: **passed**
+- Third expansion build: **passed**
+- Third expansion runtime tests: **18 passed, 0 failed**
 
-- `projects/study-progress-cli`
-- `projects/runtime-config`
-- `projects/workflow-state-machine`
-- `projects/typed-event-bus`
-- `projects/ttl-cache`
-- `projects/retry-policy`
-- `projects/circuit-breaker`
-- `projects/feature-flags`
-- `projects/dependency-graph`
-- `projects/token-bucket-rate-limiter`
-- `projects/geojson-guard`
-- `projects/lru-cache`
-- `projects/idempotency-store`
-- `projects/command-bus`
-- `projects/validation-pipeline`
-- `projects/priority-task-queue`
-- `projects/cursor-pagination`
-
-## Latest expansion validation
-
-The six newest projects compile under the repository's strict TypeScript rules and add **18 passing tests**. They were checked independently before the repository-wide metadata was updated.
+The third expansion validation caught and fixed a bulkhead lifecycle issue so released capacity is observable before the caller's promise resolves.
 
 ---
 
