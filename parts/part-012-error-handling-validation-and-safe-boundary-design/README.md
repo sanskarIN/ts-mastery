@@ -11,9 +11,13 @@
 
 Use this folder for runnable TypeScript code, tests, exercises, concise setup notes, and links to larger companion projects related to this part. Keep the complete commercial chapter text, PDF/DOCX publication pages, private data, secrets, and unlicensed third-party assets out of the public repository.
 
+## Runnable companion project
+
+- [`validation-pipeline`](../../projects/validation-pipeline/) — composable typed validation rules, aggregated failures, and discriminated-union results.
+
 ## Suggested code artifact
 
-Small language example + tests.
+Extend the validation pipeline with object-level rules, cross-field validation, or safe `unknown` parsing at an API boundary.
 
 ---
 
