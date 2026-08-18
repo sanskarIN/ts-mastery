@@ -45,6 +45,20 @@ docs/            Book-to-repository policy, code catalog, and contribution notes
 scripts/         Repository-wide verification helpers
 ```
 
+## Runnable companion projects
+
+- [`study-progress-cli`](projects/study-progress-cli/) — study progress domain and CLI
+- [`runtime-config`](projects/runtime-config/) — runtime environment validation
+- [`workflow-state-machine`](projects/workflow-state-machine/) — explicit workflow states and transitions
+- [`typed-event-bus`](projects/typed-event-bus/) — strongly typed event routing
+- [`ttl-cache`](projects/ttl-cache/) — deterministic TTL caching
+- [`retry-policy`](projects/retry-policy/) — bounded retries with exponential backoff
+- [`circuit-breaker`](projects/circuit-breaker/) — open/half-open/closed resilience states
+- [`feature-flags`](projects/feature-flags/) — deterministic percentage rollouts
+- [`dependency-graph`](projects/dependency-graph/) — topological ordering and cycle detection
+- [`token-bucket-rate-limiter`](projects/token-bucket-rate-limiter/) — rate limiting with refillable tokens
+- [`geojson-guard`](projects/geojson-guard/) — runtime-safe GeoJSON Point validation
+
 ## Book ↔ code navigation
 
 Start with [`docs/PARTS_INDEX.md`](docs/PARTS_INDEX.md). Each part has a matching folder under `parts/part-XXX-*`.
