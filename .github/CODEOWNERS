@@ -1,0 +1,13 @@
+# Default owner for repository changes.
+* @sanskarIN
+
+# Keep curriculum and publication-boundary documentation reviewed by the repository owner.
+/docs/ @sanskarIN
+/parts/ @sanskarIN
+/BOOK_CONTENT_LICENSE.md @sanskarIN
+
+# Keep build and automation changes reviewed by the repository owner.
+/.github/ @sanskarIN
+/scripts/ @sanskarIN
+/package.json @sanskarIN
+/tsconfig.json @sanskarIN
