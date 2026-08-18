@@ -11,9 +11,13 @@
 
 Use this folder for runnable TypeScript code, tests, exercises, concise setup notes, and links to larger companion projects related to this part. Keep the complete commercial chapter text, PDF/DOCX publication pages, private data, secrets, and unlicensed third-party assets out of the public repository.
 
+## Runnable companion project
+
+- [`priority-task-queue`](../../projects/priority-task-queue/) — deterministic priority scheduling with stable FIFO ordering for equal-priority work.
+
 ## Suggested code artifact
 
-Enterprise platform/reliability simulation or architecture-as-code example.
+Extend the priority queue into a worker scheduler with retries, idempotency keys, backpressure, checkpointing, and deterministic replay tests.
 
 ---
 
