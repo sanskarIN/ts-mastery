@@ -15,10 +15,11 @@ Use this folder for runnable TypeScript code, tests, exercises, concise setup no
 
 - [`typed-event-bus`](../../projects/typed-event-bus/) — strongly typed subscriptions, event payloads, one-shot listeners, and unsubscribe behavior.
 - [`idempotency-store`](../../projects/idempotency-store/) — deduplicate repeated message/job processing by key and permit retry after failed work.
+- [`outbox-store`](../../projects/outbox-store/) — model reliable publication with unique outbox records, pending reads, and publication marking.
 
 ## Suggested code artifact
 
-Combine typed event contracts with idempotent consumers, delivery metadata, dead-letter handling, or asynchronous handlers.
+Combine typed event contracts, an outbox, and idempotent consumers into a small reliable-message delivery simulation.
 
 ---
 
