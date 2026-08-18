@@ -2,19 +2,32 @@
 
 > **📘 Complete TypeScript Full Mastery eBook:** **https://ramsandesh.gumroad.com**
 
-The initial GitHub-ready companion package was locally checked with the available Node.js and TypeScript compiler environment.
+The companion repository is checked with strict TypeScript compilation plus the Node.js test runner.
 
-## Initial result
+## Expanded project validation
 
-- TypeScript compilation: passed after providing the Node.js ambient types that a normal `npm install` supplies through `@types/node`.
-- Automated tests: **9 passed, 0 failed**.
-- Representative groups tested:
-  - foundations
-  - discriminated-union type design
-  - bounded async control
-  - study-progress CLI domain logic
-  - runtime configuration validation
-  - workflow state transitions
+After adding eight additional companion projects, the complete runnable collection was validated together with the existing examples and projects.
+
+- Strict TypeScript check: **passed**
+- TypeScript build: **passed**
+- Automated tests: **29 passed, 0 failed**
+- Node.js used for the local validation: **v22.16.0**
+- TypeScript compiler available in the validation environment: **5.8.3**
+
+Validated areas include:
+
+- foundations and type design
+- bounded async control
+- study progress and runtime configuration
+- workflow state transitions
+- typed event routing
+- TTL caching
+- retry/backoff behavior
+- circuit-breaker transitions
+- deterministic feature flags
+- dependency graph ordering and cycle detection
+- token-bucket rate limiting
+- GeoJSON runtime validation
 
 For a normal clone, install the declared development dependencies first, then run:
 
@@ -22,6 +35,8 @@ For a normal clone, install the declared development dependencies first, then ru
 npm install
 npm run verify
 ```
+
+The repository CI performs the same repository-level verification command on pushes and pull requests.
 
 ---
 
