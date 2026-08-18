@@ -37,11 +37,16 @@ export class BulkheadLimiter {
         this.activeCount += 1;
         Promise.resolve()
           .then(task)
-          .then(resolve, reject)
-          .finally(() => {
-            this.activeCount -= 1;
-            this.pump();
-          });
+          .then(
+            (value) => {
+              this.release();
+              resolve(value);
+            },
+            (error: unknown) => {
+              this.release();
+              reject(error);
+            },
+          );
       };
 
       if (this.activeCount < this.maxConcurrent) {
@@ -50,6 +55,11 @@ export class BulkheadLimiter {
         this.queue.push(start);
       }
     });
+  }
+
+  private release(): void {
+    this.activeCount -= 1;
+    this.pump();
   }
 
   private pump(): void {
