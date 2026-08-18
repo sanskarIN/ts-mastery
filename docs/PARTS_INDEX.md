@@ -62,6 +62,12 @@ Examples:
 - [`projects/dependency-graph`](../projects/dependency-graph/)
 - [`projects/token-bucket-rate-limiter`](../projects/token-bucket-rate-limiter/)
 - [`projects/geojson-guard`](../projects/geojson-guard/)
+- [`projects/lru-cache`](../projects/lru-cache/)
+- [`projects/idempotency-store`](../projects/idempotency-store/)
+- [`projects/command-bus`](../projects/command-bus/)
+- [`projects/validation-pipeline`](../projects/validation-pipeline/)
+- [`projects/priority-task-queue`](../projects/priority-task-queue/)
+- [`projects/cursor-pagination`](../projects/cursor-pagination/)
 
 The part folders are intentionally lightweight navigation anchors. Larger runnable projects should live under `examples/` or `projects/` and be linked from the relevant part folder rather than duplicating the same source tree many times.
 
