@@ -2,58 +2,81 @@
 
 [![Official Gumroad Store](../assets/gumroad-store-banner.svg)](https://ramsandesh.gumroad.com)
 
-> **📘 Complete TypeScript Full Mastery eBook:** **https://ramsandesh.gumroad.com**
+This directory contains the **48 larger runnable companion projects** for the TypeScript Full Mastery curriculum. Every project is included in the root strict TypeScript build and automated test collection.
 
-This folder contains **23 larger runnable companion projects** for the 120-part TypeScript Full Mastery curriculum.
+## Foundations, state, data structures
 
-## API, validation, and application architecture
+- [`study-progress-cli`](study-progress-cli/) — 120-part study progress domain and CLI.
+- [`runtime-config`](runtime-config/) — Runtime environment validation before typed use.
+- [`typed-store`](typed-store/) — Generic observable state with typed subscriptions and updates.
+- [`immutable-diff`](immutable-diff/) — Deterministic immutable record diff and patch operations.
+- [`binary-heap`](binary-heap/) — Generic comparator-driven binary heap.
+- [`bounded-memoizer`](bounded-memoizer/) — Bounded memoization with LRU-style refresh.
+- [`lru-cache`](lru-cache/) — Generic least-recently-used caching and deterministic eviction.
+- [`ttl-cache`](ttl-cache/) — Generic in-memory cache with deterministic TTL expiry.
+- [`validation-pipeline`](validation-pipeline/) — Composable validation rules with typed success/failure results.
+- [`schema-migration-planner`](schema-migration-planner/) — Deterministic forward schema migration planning.
 
-- [`command-bus`](command-bus/) — typed command dispatch and application boundaries
-- [`validation-pipeline`](validation-pipeline/) — composable validation with typed results
-- [`cursor-pagination`](cursor-pagination/) — opaque cursor pagination for REST/GraphQL
-- [`runtime-config`](runtime-config/) — safe runtime configuration validation
-- [`middleware-pipeline`](middleware-pipeline/) — typed onion-style middleware composition
+## Application and API architecture
 
-## Events, workflows, and distributed reliability
+- [`workflow-state-machine`](workflow-state-machine/) — Explicit durable workflow states and transitions.
+- [`typed-event-bus`](typed-event-bus/) — Strongly typed event subscriptions, emission and one-shot listeners.
+- [`command-bus`](command-bus/) — Strongly typed command registration and async dispatch.
+- [`middleware-pipeline`](middleware-pipeline/) — Typed asynchronous middleware composition and ordering.
+- [`request-context-store`](request-context-store/) — Async request correlation context propagation.
+- [`api-error-envelope`](api-error-envelope/) — Stable API error contracts and safe unexpected-error mapping.
+- [`cursor-pagination`](cursor-pagination/) — Opaque cursor encoding and forward API pagination.
+- [`typed-router`](typed-router/) — Framework-free typed route registration and dispatch.
+- [`webhook-signature`](webhook-signature/) — HMAC-SHA256 webhook signing and timing-safe verification.
+- [`etag-helper`](etag-helper/) — Strong ETag generation and If-None-Match matching.
+- [`feature-flags`](feature-flags/) — Deterministic percentage rollouts and feature gating.
 
-- [`typed-event-bus`](typed-event-bus/) — strongly typed event routing
-- [`idempotency-store`](idempotency-store/) — operation deduplication and retry safety
-- [`outbox-store`](outbox-store/) — reliable message publication simulation
-- [`workflow-state-machine`](workflow-state-machine/) — explicit workflow transitions
-- [`priority-task-queue`](priority-task-queue/) — stable priority scheduling
-- [`dag-task-runner`](dag-task-runner/) — dependency-aware task execution
-- [`retry-policy`](retry-policy/) — bounded retries and exponential backoff
-- [`circuit-breaker`](circuit-breaker/) — failure isolation and recovery states
-- [`bulkhead-limiter`](bulkhead-limiter/) — concurrency isolation and bounded queues
-- [`token-bucket-rate-limiter`](token-bucket-rate-limiter/) — deterministic capacity limiting
-- [`health-check-aggregator`](health-check-aggregator/) — readiness and service-health aggregation
+## Reliability and distributed systems
 
-## Data structures, caching, and platform tooling
+- [`retry-policy`](retry-policy/) — Bounded asynchronous retries with exponential backoff.
+- [`circuit-breaker`](circuit-breaker/) — Closed, open and half-open resilience state transitions.
+- [`bulkhead-limiter`](bulkhead-limiter/) — Concurrency isolation, bounded queues, and overload rejection.
+- [`token-bucket-rate-limiter`](token-bucket-rate-limiter/) — Token-bucket request limiting with deterministic refill.
+- [`idempotency-store`](idempotency-store/) — Request/job deduplication and retry-safe operation reuse.
+- [`outbox-store`](outbox-store/) — Reliable messaging outbox records and publication tracking.
+- [`dead-letter-queue`](dead-letter-queue/) — Failed-message metadata, inspection, and requeue simulation.
+- [`saga-coordinator`](saga-coordinator/) — Sequential saga execution with reverse compensation.
+- [`lease-lock`](lease-lock/) — Deterministic expiring owner lease/lock model.
+- [`health-check-aggregator`](health-check-aggregator/) — Typed up/degraded/down readiness aggregation.
+- [`adaptive-concurrency`](adaptive-concurrency/) — Latency- and failure-aware adaptive concurrency limits.
+- [`error-budget-tracker`](error-budget-tracker/) — Rolling availability and error-budget tracking.
+- [`priority-task-queue`](priority-task-queue/) — Stable priority scheduling for workers and orchestration.
+- [`dag-task-runner`](dag-task-runner/) — Dependency-aware task execution with cycle detection.
 
-- [`ttl-cache`](ttl-cache/) — expiry-aware generic cache
-- [`lru-cache`](lru-cache/) — bounded least-recently-used cache
-- [`dependency-graph`](dependency-graph/) — topological ordering and cycle detection
-- [`feature-flags`](feature-flags/) — deterministic percentage rollouts
+## Platform engineering
 
-## Geospatial companions
+- [`dependency-graph`](dependency-graph/) — Topological ordering and dependency cycle detection.
+- [`deployment-rollout`](deployment-rollout/) — Health-gated staged deployment and rollback model.
+- [`capacity-allocation`](capacity-allocation/) — Weighted capacity allocation with minimum guarantees.
+- [`config-layering`](config-layering/) — Precedence-based configuration merging and required-key narrowing.
+- [`policy-engine`](policy-engine/) — Priority policy decisions with default-deny behavior.
+- [`multi-region-router`](multi-region-router/) — Health-, latency-, and capacity-aware region selection.
 
-- [`geojson-guard`](geojson-guard/) — runtime-safe GeoJSON Point validation
-- [`bounding-box`](bounding-box/) — point containment, intersection, and computed bounds
+## Geospatial TypeScript
 
-## Learning utility
-
-- [`study-progress-cli`](study-progress-cli/) — curriculum progress domain and CLI
+- [`geojson-guard`](geojson-guard/) — Runtime-safe GeoJSON Point Feature validation.
+- [`bounding-box`](bounding-box/) — Validated geospatial bounds, containment, intersection and expansion.
+- [`coordinate-normalization`](coordinate-normalization/) — Longitude wrapping and latitude clamping helpers.
+- [`feature-collection-guard`](feature-collection-guard/) — Runtime GeoJSON FeatureCollection structural validation.
+- [`tile-coordinates`](tile-coordinates/) — Web Mercator XYZ tile coordinate and bounds helpers.
+- [`grid-spatial-index`](grid-spatial-index/) — Fixed-grid point spatial indexing and bounding-box queries.
+- [`route-metrics`](route-metrics/) — Haversine segment and total route distance metrics.
 
 ## Quality expectations
 
-Every project should compile under repository-wide strict TypeScript settings, include meaningful automated tests, avoid secrets/private data, document its learning purpose, and pass:
+Every project must have a README, TypeScript implementation, automated tests, a machine-catalog entry, and a curriculum mapping. Run from the repository root:
 
 ```bash
 npm run verify
 ```
 
-See [`../docs/PROJECT_MATRIX.md`](../docs/PROJECT_MATRIX.md) for book-part mapping and [`../docs/PROJECT_STANDARDS.md`](../docs/PROJECT_STANDARDS.md) for the project definition of done.
+See [Project Matrix](../docs/PROJECT_MATRIX.md), [API Reference](../docs/API_REFERENCE.md), and [Project Standards](../docs/PROJECT_STANDARDS.md).
 
 ---
 
-**📚 Official Gumroad Store:** **https://ramsandesh.gumroad.com**
+**Official TypeScript Full Mastery Store:** **https://ramsandesh.gumroad.com**

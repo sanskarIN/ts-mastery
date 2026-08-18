@@ -1,61 +1,49 @@
 # Changelog
 
-> **📘 Official Gumroad Store:** **https://ramsandesh.gumroad.com**
-
 All notable changes to the public companion-code repository are documented here.
 
-## Third companion project expansion
+## Final repository completion and hardening
 
-- Added a bulkhead concurrency limiter with bounded queued work and overload rejection.
-- Added an in-memory outbox store for reliable-message publication exercises.
-- Added a typed onion-style middleware pipeline.
-- Added geospatial bounding-box utilities for containment, intersection, expansion, and point-derived bounds.
-- Added a typed health-check aggregator with `up`, `degraded`, and `down` states.
-- Added a dependency-aware DAG task runner with missing-dependency and cycle detection.
-- Added **18 new automated tests** across the six projects.
-- Validation found and fixed a bulkhead lifecycle bug before finalizing the batch.
-- Expanded CI from one runtime to a Node.js 20/22 matrix.
-- Added automatic 120-part/catalog/project structure validation.
-- Added graphical Gumroad repository banner, project matrix, project standards, testing guide, CODEOWNERS, and stronger issue/PR workflows.
-- Repository now contains **3 focused examples + 23 larger projects** with **65 expected tests**.
+- Implemented the remaining 25 roadmap projects across core TypeScript, backend/API, reliability, platform engineering, and geospatial themes.
+- Added 75 independently validated tests for the final roadmap batch.
+- Expanded the repository to 48 larger projects and 51 total runnable groups.
+- Raised the expected integrated automated-test total to 140.
+- Added complete architecture, API, setup, build/run, troubleshooting, compatibility, maintenance, dependency, quality, security, release, FAQ, and final-status documentation.
+- Fixed generic `undefined` edge cases in binary heap, bounded memoizer, and TTL cache semantics.
+- Corrected event-bus emit counts when one-shot listeners unsubscribe during delivery.
+- Hardened configuration layering against special-key/prototype assignment surprises.
+- Replaced shell-glob-dependent test invocation with recursive compiled-test discovery.
+- Made builds clean `dist/` before compilation to prevent stale artifacts/tests.
+- Strengthened structure verification so every project/example must be represented exactly once in the code catalog and contain README/source/tests.
+- Added local Markdown link verification.
+- Added repository statistics reporting.
+- Added scheduled/manual CI support and dependency-update automation.
+- Added support and documentation issue-routing metadata.
 
-## Second companion project expansion
+## Third project expansion
 
-- Added a generic LRU cache with deterministic least-recently-used eviction.
-- Added an idempotency store that deduplicates repeated async work by key and allows retries after failures.
-- Added a strongly typed command bus with register, dispatch, unregister, and duplicate-handler protection.
-- Added a composable validation pipeline with discriminated-union results and reusable validators.
-- Added a stable priority task queue with deterministic ordering for equal priorities.
-- Added opaque cursor pagination with safe decoding and forward-page navigation.
-- Added **18 new automated tests** across these six projects.
-- Fixed an `exactOptionalPropertyTypes` issue found by strict validation before finalizing the expansion.
+- Added bulkhead limiter, outbox store, typed middleware, bounding-box utilities, health aggregation, and DAG task runner.
+- Detected and fixed a bulkhead promise/cleanup lifecycle ordering issue during tests.
+- Added 18 tests for this batch.
 
-## First companion project expansion
+## Second project expansion
 
-- Added a strongly typed event bus.
-- Added a deterministic TTL cache.
-- Added a reusable retry policy.
-- Added a circuit breaker.
-- Added deterministic percentage-based feature flags.
-- Added dependency graph ordering and cycle detection.
-- Added a token-bucket rate limiter.
-- Added a GeoJSON Point Feature runtime guard.
-- Expanded repository verification to **29 passing automated tests** with strict TypeScript compilation.
+- Added LRU cache, idempotency store, command bus, validation pipeline, priority task queue, and cursor pagination.
+- Detected and fixed an `exactOptionalPropertyTypes` issue in cursor-pagination tests.
+- Added 18 tests for this batch.
 
-## Storefront visibility update
+## First project expansion
 
-- Highlighted the official Gumroad storefront across reader-facing repository documentation.
-- Added Gumroad to repository funding and package metadata.
-- Added a repository-owned graphical Gumroad banner.
+- Added typed event bus, TTL cache, retry policy, circuit breaker, feature flags, dependency graph, token-bucket limiter, and GeoJSON guard.
+- Expanded the validated suite to 29 tests at that milestone.
 
-## 1.0.0 — Initial public companion release
+## Initial public companion release
 
-- Added repository policy and licensing separation.
-- Added navigation folders for Parts 001–120.
-- Added focused TypeScript examples with tests.
-- Added study-progress, runtime-configuration, and workflow-state-machine companion projects.
-- Added CI, contribution, security, and issue/PR templates.
+- Added Parts 001–120 navigation.
+- Added focused TypeScript examples and initial companion projects.
+- Added MIT source-code licensing separated from commercial book-content licensing.
+- Added CI, contribution, security, and repository policy files.
 
 ---
 
-**Official store:** **https://ramsandesh.gumroad.com**
+**Official TypeScript Full Mastery Store:** **https://ramsandesh.gumroad.com**

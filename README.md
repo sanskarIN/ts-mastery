@@ -5,85 +5,99 @@ A public companion-code repository for the **TypeScript Full Mastery — Complet
 [![Official Gumroad Store](assets/gumroad-store-banner.svg)](https://ramsandesh.gumroad.com)
 
 > ## 📘 Get the Complete TypeScript Full Mastery eBook
-> **Gumroad Store:** **https://ramsandesh.gumroad.com**
->
-> Visit the official Gumroad storefront for the complete book and future publication releases.
+> **Official Store:** **https://ramsandesh.gumroad.com**
 
-This repository is intentionally focused on **source code, exercises, small reusable examples, tests, and companion projects**. The complete commercial book text, merged PDF, merged DOCX, cover artwork, and other publication assets are **not** included in this public-code repository.
+This repository contains the open-source companion **code, tests, exercises, and code documentation**. The commercial manuscript, merged PDF/DOCX, cover package, and other publication assets are intentionally separate.
 
-## Repository
+## Current repository
 
-- GitHub: https://github.com/sanskarIN/ts-mastery
-- **Official Gumroad Store: https://ramsandesh.gumroad.com**
-- Author: Ram Sandesh
-- Code license: MIT
+- **120** curriculum navigation folders
+- **3** focused runnable examples
+- **48** larger companion projects
+- **51** runnable groups in the machine catalog
+- **140 expected automated tests** after final integration
+- strict TypeScript / NodeNext / ES2022
+- Node.js **20 + 22** CI
+- MIT source-code license
+- separate book-content license
 
 ## Quick start
 
 ```bash
+git clone https://github.com/sanskarIN/ts-mastery.git
+cd ts-mastery
 npm install
 npm run verify
 ```
 
-`npm run verify` checks the 120-part repository structure, catalog paths, strict TypeScript compilation, the project build, and automated tests. GitHub Actions runs the same verification on Node.js 20 and 22.
+`npm run verify` checks repository/catalog structure, local documentation links, strict TypeScript, a clean build, and every recursively discovered compiled test.
 
-## Structure
+## Documentation
+
+Start with [`docs/README.md`](docs/README.md).
+
+Key guides:
+
+- [Getting Started](docs/GETTING_STARTED.md)
+- [Architecture](docs/ARCHITECTURE.md)
+- [API Reference](docs/API_REFERENCE.md)
+- [Build and Run](docs/BUILD_AND_RUN.md)
+- [Project Matrix](docs/PROJECT_MATRIX.md)
+- [Testing Guide](docs/TESTING_GUIDE.md)
+- [Troubleshooting](docs/TROUBLESHOOTING.md)
+- [Quality Gates](docs/QUALITY_GATES.md)
+- [Release Checklist](docs/RELEASE_CHECKLIST.md)
+
+## Repository structure
 
 ```text
-examples/        Small focused examples
-projects/        23 larger runnable companion projects
-parts/           Part-by-part navigation for Parts 001–120
-docs/            Project matrix, testing guide, catalog, standards, and publishing boundaries
-scripts/         Repository-wide verification helpers
-assets/          Repository-owned visual assets
+examples/        3 focused examples
+projects/        48 larger runnable companion projects
+parts/           Parts 001–120 navigation
+docs/            Complete public code documentation
+scripts/         Verification, test discovery, cleanup, statistics
+assets/          Repository-owned documentation assets
+.github/         CI, issue forms, ownership, dependency automation
 ```
 
-## Runnable companion projects
+Browse [`projects/README.md`](projects/README.md) for the categorized project catalog and [`docs/PARTS_INDEX.md`](docs/PARTS_INDEX.md) for curriculum navigation.
 
-See [`projects/README.md`](projects/README.md) for the categorized landing page and [`docs/PROJECT_MATRIX.md`](docs/PROJECT_MATRIX.md) for curriculum mapping.
+## Commands
 
-- [`study-progress-cli`](projects/study-progress-cli/) — study progress domain and CLI
-- [`runtime-config`](projects/runtime-config/) — runtime environment validation
-- [`workflow-state-machine`](projects/workflow-state-machine/) — explicit workflow states and transitions
-- [`typed-event-bus`](projects/typed-event-bus/) — strongly typed event routing
-- [`ttl-cache`](projects/ttl-cache/) — deterministic TTL caching
-- [`retry-policy`](projects/retry-policy/) — bounded retries with exponential backoff
-- [`circuit-breaker`](projects/circuit-breaker/) — open/half-open/closed resilience states
-- [`feature-flags`](projects/feature-flags/) — deterministic percentage rollouts
-- [`dependency-graph`](projects/dependency-graph/) — topological ordering and cycle detection
-- [`token-bucket-rate-limiter`](projects/token-bucket-rate-limiter/) — rate limiting with refillable tokens
-- [`geojson-guard`](projects/geojson-guard/) — runtime-safe GeoJSON Point validation
-- [`lru-cache`](projects/lru-cache/) — least-recently-used eviction cache
-- [`idempotency-store`](projects/idempotency-store/) — deduplicated request/job execution
-- [`command-bus`](projects/command-bus/) — strongly typed command dispatch
-- [`validation-pipeline`](projects/validation-pipeline/) — composable validation rules
-- [`priority-task-queue`](projects/priority-task-queue/) — stable priority scheduling
-- [`cursor-pagination`](projects/cursor-pagination/) — opaque cursor pagination
-- [`bulkhead-limiter`](projects/bulkhead-limiter/) — bounded concurrent work and overload protection
-- [`outbox-store`](projects/outbox-store/) — reliable messaging outbox simulation
-- [`middleware-pipeline`](projects/middleware-pipeline/) — typed onion-style middleware composition
-- [`bounding-box`](projects/bounding-box/) — geospatial bounding-box utilities
-- [`health-check-aggregator`](projects/health-check-aggregator/) — typed readiness/health aggregation
-- [`dag-task-runner`](projects/dag-task-runner/) — dependency-aware task execution
+```bash
+npm run clean
+npm run check
+npm run build
+npm test
+npm run verify:structure
+npm run verify:docs
+npm run stats
+npm run verify
+```
 
-## Book ↔ code navigation
+## Quality and security
 
-Start with [`docs/PARTS_INDEX.md`](docs/PARTS_INDEX.md). Each book part has a matching folder under `parts/part-XXX-*` and relevant parts link directly to runnable projects.
+Contributions should follow:
 
-## Repository standards
-
-- [`docs/PROJECT_STANDARDS.md`](docs/PROJECT_STANDARDS.md)
-- [`docs/TESTING_GUIDE.md`](docs/TESTING_GUIDE.md)
 - [`CONTRIBUTING.md`](CONTRIBUTING.md)
+- [`docs/PROJECT_STANDARDS.md`](docs/PROJECT_STANDARDS.md)
+- [`docs/CODE_STYLE.md`](docs/CODE_STYLE.md)
+- [`docs/TESTING_GUIDE.md`](docs/TESTING_GUIDE.md)
 - [`SECURITY.md`](SECURITY.md)
+
+Security-sensitive examples use fake/local values. Never commit credentials, private datasets, production secrets, or proprietary code.
 
 ## Licensing
 
-- Source code: [`LICENSE`](LICENSE) (MIT).
-- Book/editorial content: [`BOOK_CONTENT_LICENSE.md`](BOOK_CONTENT_LICENSE.md).
+- Public source code: [`LICENSE`](LICENSE) — MIT
+- Commercial/editorial book content: [`BOOK_CONTENT_LICENSE.md`](BOOK_CONTENT_LICENSE.md)
 
-Publishing code under MIT does **not** place the commercial book itself under MIT.
+The MIT license for this repository does **not** place the commercial book under MIT.
+
+## Support
+
+See [`SUPPORT.md`](SUPPORT.md) for issue-routing guidance.
 
 ---
 
-**📘 TypeScript Full Mastery Store:** **https://ramsandesh.gumroad.com**
+**📘 Official TypeScript Full Mastery Store:** **https://ramsandesh.gumroad.com**

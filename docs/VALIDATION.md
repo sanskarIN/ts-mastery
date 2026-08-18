@@ -1,67 +1,59 @@
 # Validation Record
 
-> **📘 Complete TypeScript Full Mastery eBook:** **https://ramsandesh.gumroad.com**
+The repository uses repository-structure checks, documentation-link checks, strict TypeScript compilation, clean builds, the Node.js test runner, and GitHub Actions.
 
-The companion repository is checked with repository-structure validation, strict TypeScript compilation, the Node.js test runner, and GitHub Actions.
+## Recorded milestones
 
-## Validation milestones
+| Milestone | Result |
+|---|---|
+| Initial runnable package | 9 tests passed |
+| First expanded suite | 29 tests passed |
+| Second project batch | 18 new tests passed, 0 failed |
+| Third project batch | 18 new tests passed, 0 failed |
+| Final roadmap batch | 25 projects; 75 new tests passed, 0 failed |
 
-### Initial runnable package
+The final roadmap batch was independently compiled under strict TypeScript and executed together before publication using Node.js **22.16.0** and TypeScript **5.8.3**.
 
-- Automated tests: **9 passed, 0 failed**
+## Current expected integrated scale
 
-### First project expansion
+- curriculum folders: **120**
+- focused examples: **3**
+- larger projects: **48**
+- cataloged runnable groups: **51**
+- expected automated-test cases: **140**
+- source test files: **51**
 
-- Complete automated suite at that milestone: **29 passed, 0 failed**
-- Strict TypeScript check: **passed**
-- Build: **passed**
+The expected 140 total is the previously recorded 65-test repository collection plus the independently validated 75-test final roadmap batch. The complete post-integration `npm run verify`/GitHub Actions run is the clean-environment authority; do not reinterpret this document as a mathematical guarantee that defects are impossible.
 
-### Second project expansion
+## Known issues found and fixed during development
 
-- New projects: **6**
-- New automated tests: **18 passed, 0 failed**
-- Strict TypeScript check: **passed**
-- Build: **passed**
-- One `exactOptionalPropertyTypes` issue in cursor-pagination test code was detected and fixed before completion.
+Validation previously caught and corrected:
 
-### Third project expansion
+- an `exactOptionalPropertyTypes` mismatch in cursor-pagination tests;
+- a bulkhead lifecycle ordering defect where capacity cleanup could occur immediately after the caller observed promise completion;
+- generic `undefined` edge cases in heap/memoization/TTL presence semantics;
+- event-bus emission counts for one-shot listeners;
+- special-key assignment safety in layered configuration.
 
-New projects:
+This is why the repository treats strict compilation and behavior tests as required, not optional.
 
-- bulkhead concurrency limiter
-- in-memory outbox store
-- typed middleware pipeline
-- bounding-box utilities
-- health-check aggregator
-- DAG task runner
-
-Validation result:
-
-- New automated tests: **18 passed, 0 failed**
-- Strict TypeScript compilation: **passed**
-- Build: **passed**
-- Node.js validation runtime: **v22.16.0**
-- TypeScript validation compiler: **5.8.3**
-
-During testing, a bulkhead lifecycle issue was detected: the public promise could resolve immediately before the internal active-capacity counter was released. The implementation was changed so capacity is released and queued work is pumped before callers observe resolution/rejection.
-
-## Current repository scale
-
-- Focused runnable examples: **3**
-- Larger companion projects: **23**
-- Runnable groups in catalog: **26**
-- Expected complete automated-test count: **65**
-- Part-navigation folders: **120**
-
-## Standard verification
+## Canonical command
 
 ```bash
 npm install
 npm run verify
 ```
 
-`npm run verify` now validates repository structure/catalog paths, strict TypeScript types, build output, and automated tests. GitHub Actions runs it on Node.js 20 and 22.
+The final verification sequence is:
+
+1. exact structure/catalog verification;
+2. local Markdown link verification;
+3. strict TypeScript no-emit check;
+4. clean compilation;
+5. recursive discovery and execution of compiled tests.
+
+See [Quality Gates](QUALITY_GATES.md) and [Final Release Status](FINAL_RELEASE_STATUS.md).
 
 ---
 
-**📚 Official Gumroad Store:** **https://ramsandesh.gumroad.com**
+**Official TypeScript Full Mastery Store:** **https://ramsandesh.gumroad.com**

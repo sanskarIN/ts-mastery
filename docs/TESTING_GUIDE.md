@@ -1,75 +1,76 @@
 # Testing Guide
 
-> **📘 Complete TypeScript Full Mastery eBook:** **https://ramsandesh.gumroad.com**
+The repository uses the built-in Node.js test runner with TypeScript tests compiled through the root configuration.
 
-The companion repository treats tests as executable learning material. A reader should be able to understand important behavior by reading a project's tests before reading every implementation detail.
+## Required pattern
 
-## Standard verification
+Every runnable project/example must include at least one `*.test.ts` file under its `src/` directory.
 
-Install dependencies and run:
+Tests should cover meaningful behavior, not only constructor smoke tests. Include boundary/error cases where the implementation has important invariants.
 
-```bash
-npm install
-npm run verify
-```
-
-The `verify` command performs:
-
-1. repository structure and catalog verification;
-2. strict TypeScript type checking;
-3. TypeScript build;
-4. Node.js automated tests.
-
-## Run individual stages
+## Run all tests
 
 ```bash
-npm run verify:structure
-npm run check
-npm run build
 npm test
 ```
 
-## What a useful test should prove
+The test lifecycle:
 
-Prefer behavior-oriented tests such as:
+1. deletes `dist/`;
+2. compiles the complete repository;
+3. recursively discovers generated `*.test.js`;
+4. fails if zero tests are found;
+5. invokes `node --test` with the complete sorted file list.
 
-- an LRU cache evicts the least recently used key;
-- an idempotency store executes duplicate concurrent requests once;
-- a circuit breaker transitions to open after its failure threshold;
-- a priority queue preserves FIFO order when priorities match;
-- a cursor parser rejects malformed input;
-- a validation pipeline returns all relevant errors.
+This avoids shell-specific `**` glob behavior and stale generated tests.
 
-Avoid tests that only repeat an implementation line without proving a contract.
+## Full verification
 
-## Determinism
+```bash
+npm run verify
+```
 
-When a project depends on time, retries, randomness, capacity, or scheduling, make the changing dependency injectable where practical. Deterministic tests are easier to learn from and less likely to become flaky.
+This adds structure, docs-link, and strict no-emit checks before the test build.
 
-## Type-system tests
+## Deterministic testing
 
-The repository's `tsc --noEmit` check is part of the test strategy. Compiler failures can expose API-design regressions that runtime tests cannot.
+Prefer injectable time/sleep/capacity inputs over real waits. Examples include TTL cache, token bucket, retry policy, circuit breaker, leases, outbox records, dead letters, and adaptive concurrency.
 
-Important options include:
+## Async lifecycle testing
 
-- `strict`;
-- `noUncheckedIndexedAccess`;
-- `exactOptionalPropertyTypes`;
-- `noImplicitOverride`;
-- `noFallthroughCasesInSwitch`.
+When a class tracks concurrency or cleanup, test the state visible immediately after awaited completion. This caught a real bulkhead cleanup-ordering defect during repository development.
 
-## CI coverage
+## Runtime-boundary tests
 
-GitHub Actions runs the repository verification suite across Node.js 20 and 22. A contribution should not assume behavior from only one supported CI runtime.
+For guards/validation code, test:
 
-## Before submitting a pull request
+- valid input;
+- malformed structure;
+- missing values;
+- invalid numeric ranges;
+- unexpected values typed as `unknown`.
 
-- run `npm run verify`;
-- read the changed test output;
-- confirm no secrets or private fixtures were added;
-- update docs/catalog entries if a project was added, renamed, or removed;
-- ensure tests cover at least one meaningful boundary or failure case when relevant.
+## Data-structure tests
 
----
+Test ordering, duplicates, empty behavior, capacity/eviction, and deterministic tie-breaking.
 
-**📚 Official Gumroad Store:** **https://ramsandesh.gumroad.com**
+## Geospatial tests
+
+Use small deterministic coordinates. Test range validation, boundary inclusion, invalid bounds, and known reference cases such as the world tile or one degree at the equator.
+
+## Focused development
+
+You may run one compiled test after building:
+
+```bash
+npm run build
+node --test dist/projects/retry-policy/src/retry.test.js
+```
+
+Always run the full `npm run verify` before contributing.
+
+## Test count
+
+The current integrated repository is expected to contain **140 automated test cases** across **51 source test files**. `npm run stats` reports source test-file count; the Node test runner reports actual executed test cases.
+
+See [Validation Record](VALIDATION.md).

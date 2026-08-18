@@ -1,88 +1,76 @@
 # Roadmap
 
-[![Official Gumroad Store](assets/gumroad-store-banner.svg)](https://ramsandesh.gumroad.com)
+The originally planned companion-code expansion is now implemented. The repository has moved from feature-fill work into maintenance and selective extension.
 
-> **📘 Complete TypeScript Full Mastery eBook:** **https://ramsandesh.gumroad.com**
+## Completed foundation
 
-The repository grows by adding tested companion code without publishing the commercial book text.
+- 120 part-navigation folders
+- 3 focused examples
+- 48 larger companion projects
+- 51 machine-cataloged runnable groups
+- strict TypeScript and deterministic tests
+- Node 20/22 CI
+- complete documentation hub
+- structure/catalog/docs-link verification
+- recursive test discovery
+- dependency-update automation
+- security, maintenance, release, and support documentation
 
-## Current foundation
-
-- 120 curriculum navigation folders
-- 3 focused runnable examples
-- 23 larger companion projects
-- 65 expected automated tests across the current runnable collection
-- strict TypeScript compiler settings
-- automated structure/catalog checks
-- GitHub Actions verification on Node.js 20 and 22
-- project matrix, testing guide, contribution standards, CODEOWNERS, and project-proposal workflow
-- repository-owned graphical Gumroad banner
-
-## Completed recent roadmap items
-
-- bulkhead concurrency limiter
-- outbox pattern simulation
-- typed middleware pipeline
-- bounding-box utilities
-- health/readiness aggregator
-- DAG task runner
-
-## Next project themes
+## Completed final project themes
 
 ### Core TypeScript and data structures
 
-- typed observable/store primitive
-- immutable patch/diff engine
-- generic binary heap
+- typed store
+- immutable diff/patch
+- binary heap
 - schema migration planner
-- bounded memoization utility
+- bounded memoizer
 
-### Backend and API engineering
+### Backend and API
 
-- request correlation/context store
-- API error envelope mapper
-- webhook signature-verification demo using fake test secrets
-- ETag/conditional-request helper
-- typed router learning example
+- request context
+- API error envelopes
+- webhook HMAC
+- ETags
+- typed router
 
 ### Reliability and distributed systems
 
-- dead-letter queue simulator
+- dead-letter queue
 - saga coordinator
-- lease/lock state model
-- adaptive concurrency model
-- rolling error-budget tracker
+- lease lock
+- adaptive concurrency
+- error-budget tracker
 
-### Platform and workflow engineering
+### Platform/workflow
 
-- deployment rollout simulator
-- capacity allocation model
-- configuration layering engine
-- policy decision engine
-- multi-region routing simulator
+- deployment rollout
+- capacity allocation
+- configuration layering
+- policy engine
+- multi-region router
 
-### Geospatial TypeScript
+### Geospatial
 
 - coordinate normalization
-- GeoJSON FeatureCollection validation
-- tile-coordinate conversion helpers
-- spatial indexing learning example
-- simple route/segment metrics
+- FeatureCollection guard
+- tile-coordinate helpers
+- grid spatial index
+- route metrics
 
-## Documentation roadmap
+## Maintenance roadmap
 
-- Keep `docs/PARTS_INDEX.md`, `docs/PROJECT_MATRIX.md`, and `docs/code-catalog.json` synchronized with every new runnable artifact.
-- Add architecture notes only where they help readers understand public code without reproducing the paid manuscript.
-- Keep the official Gumroad link prominent in reader-facing documentation.
+Future work should be accepted when it materially improves learning quality, correctness, security, compatibility, or navigation. Priority areas:
 
-## Quality gate
+- fix reproducible bugs;
+- keep supported Node/TypeScript versions current;
+- review dependency/security updates;
+- improve tests when a real edge case is discovered;
+- refine docs when APIs or curriculum links change;
+- add a new project only when it fills a clear learning gap.
 
-Every new runnable artifact should compile under strict TypeScript settings, include meaningful tests, satisfy the repository structure validator, and pass:
-
-```bash
-npm run verify
-```
+Avoid adding projects solely to increase project/commit counts.
 
 ---
 
-**📚 Official Gumroad Store:** **https://ramsandesh.gumroad.com**
+**Official TypeScript Full Mastery Store:** **https://ramsandesh.gumroad.com**

@@ -1,35 +1,39 @@
 # Repository Build Summary
 
-> **📘 Complete TypeScript Full Mastery eBook:** **https://ramsandesh.gumroad.com**
+- Part navigation folders: **120**
+- Focused runnable examples: **3**
+- Larger companion projects: **48**
+- Machine-cataloged runnable groups: **51**
+- Expected automated tests after final integration: **140**
+- Source-code license: **MIT**
+- Book/editorial content license: separate
+- Supported CI runtimes: **Node.js 20 and 22**
+- Module format: **ESM / NodeNext**
+- JavaScript target: **ES2022**
+- Strict TypeScript: enabled
+- Documentation-link verification: enabled
+- Exact catalog/project coverage verification: enabled
+- Recursive test discovery: enabled
+- Clean-before-build behavior: enabled
 
-- Part navigation folders: 120
-- Working example/project groups: 26
-- Focused examples: 3
-- Larger companion projects: 23
-- Code license: MIT
-- Book content license: separate all-rights-reserved notice
-- CI workflow: Node.js 20 and 22 verification matrix
-- Automated structure/catalog verification: included
-- Issue/PR templates and CODEOWNERS: included
-- Official Gumroad storefront: **https://ramsandesh.gumroad.com**
+## Primary entry points
 
-## Current project groups
+- [Repository README](../README.md)
+- [Documentation Hub](README.md)
+- [Projects](../projects/README.md)
+- [Parts Index](PARTS_INDEX.md)
+- [API Reference](API_REFERENCE.md)
+- [Quality Gates](QUALITY_GATES.md)
 
-The complete categorized list lives in [`../projects/README.md`](../projects/README.md), while curriculum mapping lives in [`PROJECT_MATRIX.md`](PROJECT_MATRIX.md).
+## Verification
 
-## Validation milestones
+```bash
+npm install
+npm run verify
+```
 
-- Initial runnable suite: **9 passing tests**
-- First expanded complete suite: **29 passing tests**
-- Second expansion: **18 additional passing tests**
-- Third expansion: **18 additional passing tests**
-- Current expected repository total: **65 tests**
-- Third expansion strict TypeScript compilation: **passed**
-- Third expansion build: **passed**
-- Third expansion runtime tests: **18 passed, 0 failed**
-
-The third expansion validation caught and fixed a bulkhead lifecycle issue so released capacity is observable before the caller's promise resolves.
+For machine-readable project metadata, use [`code-catalog.json`](code-catalog.json).
 
 ---
 
-**📚 Official Gumroad Store:** **https://ramsandesh.gumroad.com**
+**Official TypeScript Full Mastery Store:** **https://ramsandesh.gumroad.com**
