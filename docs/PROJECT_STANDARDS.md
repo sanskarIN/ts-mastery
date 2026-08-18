@@ -1,85 +1,75 @@
 # Companion Project Standards
 
-> **📘 Complete TypeScript Full Mastery eBook:** **https://ramsandesh.gumroad.com**
+> **Complete TypeScript Full Mastery eBook:** **https://ramsandesh.gumroad.com**
 
-This document defines the minimum quality bar for runnable projects in `projects/`.
+This document defines the minimum quality bar for every runnable group in `projects/` and `examples/`.
 
-## Required structure
+## Required project structure
 
-A normal dependency-free companion project should contain:
+A normal companion project contains:
 
 ```text
-projects/<project-name>/
+projects/<kebab-case-name>/
 ├── README.md
 └── src/
-    ├── <project>.ts
-    └── <project>.test.ts
+    ├── <implementation>.ts
+    └── <implementation>.test.ts
 ```
 
-Larger framework-specific projects may use a different structure when justified, but they should remain independently understandable.
+The executable structure verifier requires a README, `src/`, at least one non-test TypeScript implementation file, and at least one `.test.ts` file.
 
 ## TypeScript requirements
 
-- Compile under the repository `tsconfig.json`.
-- Keep `strict` mode enabled.
+- Compile under the root `tsconfig.json`.
+- Keep strict mode enabled.
 - Respect `noUncheckedIndexedAccess` and `exactOptionalPropertyTypes`.
-- Prefer explicit domain types over broad `any` usage.
-- Narrow `unknown` inputs before use.
-- Keep public APIs small and intentional.
+- Prefer explicit domain types and generics over broad casts.
+- Use `unknown` at untrusted boundaries and narrow it before use.
+- Keep APIs intentional and small enough to teach.
+- Handle valid generic values such as `undefined` without accidentally treating them as missing sentinels.
 
 ## Testing requirements
 
-Tests should cover important behavior rather than merely execute lines.
+Tests should cover behavior rather than only execute lines. Include, where relevant:
 
-At minimum, cover:
+- primary success behavior;
+- invalid/failure behavior;
+- boundary/state transitions;
+- generic edge cases;
+- deterministic time/scheduling/retry behavior;
+- lifecycle/cleanup ordering for async code;
+- security-sensitive special keys or malformed external input.
 
-- the primary success path;
-- at least one invalid input or failure path where relevant;
-- an important boundary or state transition;
-- deterministic behavior for time, randomness, scheduling, or retries whenever possible.
+See [Testing Guide](TESTING_GUIDE.md).
 
 ## Documentation requirements
 
-Every project README should explain:
+Every larger project must be represented in:
 
-- what the project demonstrates;
-- its important behaviors;
-- which curriculum areas it supports;
-- how to run repository verification;
-- the official Gumroad store link without copying paid chapter content.
+- its own `README.md`;
+- [`projects/README.md`](../projects/README.md);
+- [`PROJECT_MATRIX.md`](PROJECT_MATRIX.md);
+- [`API_REFERENCE.md`](API_REFERENCE.md);
+- [`code-catalog.json`](code-catalog.json).
+
+Link it from relevant part READMEs when that improves reader navigation.
 
 ## Security and privacy
 
-Never commit:
-
-- credentials or secrets;
-- real production tokens;
-- private user data;
-- proprietary datasets;
-- copied closed-source code;
-- unlicensed third-party assets.
-
-Use clearly fake fixtures when an example needs configuration or data.
+Never commit credentials, production secrets, private user data, proprietary datasets/code, or unlicensed assets. Security examples use fake/local values and must clearly state production limitations.
 
 ## Repository boundaries
 
-The MIT code license covers the public source code. The commercial book manuscript, publication PDF/DOCX/EPUB files, cover masters, and other editorial assets remain outside this repository unless deliberately published under a separate notice.
+The MIT license covers public source code. The commercial book manuscript, PDF/DOCX/EPUB, cover masters, and other editorial assets remain outside this repository unless intentionally published under a separate notice.
 
 ## Definition of done
-
-Before a project is considered complete:
 
 ```bash
 npm run verify
 ```
 
-must pass. The project should also be listed in:
-
-- `README.md` or `projects/README.md`;
-- `docs/PARTS_INDEX.md` when relevant;
-- `docs/PROJECT_MATRIX.md`;
-- `docs/code-catalog.json`.
+must pass before a runnable change is considered complete. See [Quality Gates](QUALITY_GATES.md).
 
 ---
 
-**📚 Official Gumroad Store:** **https://ramsandesh.gumroad.com**
+**Official TypeScript Full Mastery Store:** **https://ramsandesh.gumroad.com**

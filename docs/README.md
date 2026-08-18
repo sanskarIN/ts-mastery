@@ -10,7 +10,7 @@ For readers who want to run the code, begin with [Getting Started](GETTING_START
 
 For contributors, read [Project Standards](PROJECT_STANDARDS.md), [Code Style](CODE_STYLE.md), [Testing Guide](TESTING_GUIDE.md), and the root [Contributing Guide](../CONTRIBUTING.md) before opening a change.
 
-For maintainers, use [Quality Gates](QUALITY_GATES.md), [Maintenance](MAINTENANCE.md), [Dependency Policy](DEPENDENCY_POLICY.md), [Security Hardening](SECURITY_HARDENING.md), and the [Release Checklist](RELEASE_CHECKLIST.md).
+For maintainers, use [Quality Gates](QUALITY_GATES.md), [Maintenance](MAINTENANCE.md), [Dependency Policy](DEPENDENCY_POLICY.md), [Security Hardening](SECURITY_HARDENING.md), [Release Checklist](RELEASE_CHECKLIST.md), and [Final Audit](FINAL_AUDIT.md).
 
 ## Documentation map
 
@@ -33,7 +33,8 @@ For maintainers, use [Quality Gates](QUALITY_GATES.md), [Maintenance](MAINTENANC
 | [Dependency Policy](DEPENDENCY_POLICY.md) | Dependency-light policy and update procedure |
 | [Security Hardening](SECURITY_HARDENING.md) | Secret handling and secure-example rules |
 | [Release Checklist](RELEASE_CHECKLIST.md) | Repeatable pre-release and release procedure |
-| [GitHub Release Plan](GITHUB_RELEASE_PLAN.md) | Release-channel planning notes |
+| [GitHub Release Plan](GITHUB_RELEASE_PLAN.md) | Final release/tag strategy |
+| [Final Audit](FINAL_AUDIT.md) | Executed validation vs unsurfaced GitHub-hosted checks |
 | [Book-to-Repo Policy](BOOK_TO_REPO_POLICY.md) | Public-code vs commercial-content boundary |
 | [Commit Policy](COMMIT_POLICY.md) | Commit-quality expectations |
 | [Validation Record](VALIDATION.md) | Recorded validation milestones |
