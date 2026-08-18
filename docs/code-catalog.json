@@ -20,14 +20,22 @@
     { "path": "projects/feature-flags", "purpose": "Deterministic percentage rollouts and feature gating" },
     { "path": "projects/dependency-graph", "purpose": "Topological ordering and dependency cycle detection" },
     { "path": "projects/token-bucket-rate-limiter", "purpose": "Token-bucket request limiting with deterministic refill" },
-    { "path": "projects/geojson-guard", "purpose": "Runtime-safe GeoJSON Point Feature validation" }
+    { "path": "projects/geojson-guard", "purpose": "Runtime-safe GeoJSON Point Feature validation" },
+    { "path": "projects/lru-cache", "purpose": "Generic least-recently-used caching and deterministic eviction" },
+    { "path": "projects/idempotency-store", "purpose": "Request/job deduplication and retry-safe operation reuse" },
+    { "path": "projects/command-bus", "purpose": "Strongly typed command registration and async dispatch" },
+    { "path": "projects/validation-pipeline", "purpose": "Composable validation rules with typed success/failure results" },
+    { "path": "projects/priority-task-queue", "purpose": "Stable priority scheduling for workers and orchestration" },
+    { "path": "projects/cursor-pagination", "purpose": "Opaque cursor encoding and forward API pagination" }
   ],
   "validation": {
     "initialAutomatedTestsPassed": 9,
-    "latestAutomatedTestsPassed": 29,
-    "latestAutomatedTestsFailed": 0,
+    "previousAutomatedTestsPassed": 29,
+    "newBatchAutomatedTestsPassed": 18,
+    "newBatchAutomatedTestsFailed": 0,
+    "expectedRepositoryTestCount": 47,
     "strictTypeScript": true,
-    "latestStrictTypeScriptCheckPassed": true,
-    "latestBuildPassed": true
+    "newBatchStrictTypeScriptCheckPassed": true,
+    "newBatchBuildPassed": true
   }
 }
