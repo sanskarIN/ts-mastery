@@ -1,0 +1,49 @@
+name: Companion project proposal
+description: Propose a new runnable TypeScript companion project tied to the 120-part curriculum.
+title: "[Project]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing a companion-code addition. Keep the proposal focused on public source code; do not paste commercial book chapters or private information.
+  - type: input
+    id: part
+    attributes:
+      label: Related part or curriculum area
+      description: Which TypeScript Full Mastery part(s) or concepts does this support?
+      placeholder: "Example: Part 23 — Event-Driven Architecture"
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Proposed project name
+      placeholder: "Example: outbox-pattern"
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Learning purpose
+      description: Explain the behavior, TypeScript concepts, and engineering skill the project should demonstrate.
+    validations:
+      required: true
+  - type: textarea
+    id: tests
+    attributes:
+      label: Test plan
+      description: Describe important success, failure, boundary, and deterministic test cases.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Repository boundaries
+      options:
+        - label: The proposal does not require publishing paid book manuscript content.
+          required: true
+        - label: The proposal can use fake/sample data without secrets or private information.
+          required: true
+        - label: The implementation can be documented and tested as a standalone public companion project.
+          required: true
