@@ -9,7 +9,8 @@
     "check": "tsc -p tsconfig.json --noEmit",
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && node --test dist/**/*.test.js",
-    "verify": "npm run check && npm test"
+    "verify:structure": "node scripts/verify-structure.mjs",
+    "verify": "npm run verify:structure && npm run check && npm test"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",
