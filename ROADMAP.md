@@ -4,17 +4,28 @@
 
 > **📘 Complete TypeScript Full Mastery eBook:** **https://ramsandesh.gumroad.com**
 
-The repository grows by adding tested companion code without publishing the commercial book text. The official storefront for the complete eBook and publication releases is **https://ramsandesh.gumroad.com**.
+The repository grows by adding tested companion code without publishing the commercial book text.
 
 ## Current foundation
 
 - 120 curriculum navigation folders
 - 3 focused runnable examples
-- 17 larger dependency-light companion projects
+- 23 larger companion projects
+- 65 expected automated tests across the current runnable collection
 - strict TypeScript compiler settings
 - automated structure/catalog checks
 - GitHub Actions verification on Node.js 20 and 22
-- project matrix, testing guide, contribution standards, and ownership rules
+- project matrix, testing guide, contribution standards, CODEOWNERS, and project-proposal workflow
+- repository-owned graphical Gumroad banner
+
+## Completed recent roadmap items
+
+- bulkhead concurrency limiter
+- outbox pattern simulation
+- typed middleware pipeline
+- bounding-box utilities
+- health/readiness aggregator
+- DAG task runner
 
 ## Next project themes
 
@@ -28,24 +39,22 @@ The repository grows by adding tested companion code without publishing the comm
 
 ### Backend and API engineering
 
-- typed middleware pipeline
 - request correlation/context store
 - API error envelope mapper
 - webhook signature-verification demo using fake test secrets
 - ETag/conditional-request helper
+- typed router learning example
 
 ### Reliability and distributed systems
 
-- bulkhead concurrency limiter
-- outbox/inbox pattern simulation
 - dead-letter queue simulator
 - saga coordinator
 - lease/lock state model
-- health/readiness state aggregator
+- adaptive concurrency model
+- rolling error-budget tracker
 
 ### Platform and workflow engineering
 
-- DAG task runner
 - deployment rollout simulator
 - capacity allocation model
 - configuration layering engine
@@ -54,11 +63,11 @@ The repository grows by adding tested companion code without publishing the comm
 
 ### Geospatial TypeScript
 
-- bounding-box utilities
 - coordinate normalization
 - GeoJSON FeatureCollection validation
 - tile-coordinate conversion helpers
 - spatial indexing learning example
+- simple route/segment metrics
 
 ## Documentation roadmap
 
