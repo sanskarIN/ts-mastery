@@ -1,5 +1,7 @@
 # TypeScript Full Mastery — Companion Projects
 
+[![Official Gumroad Store](../assets/gumroad-store-banner.svg)](https://ramsandesh.gumroad.com)
+
 > **📘 Complete TypeScript Full Mastery eBook:** **https://ramsandesh.gumroad.com**
 
 This folder contains the larger runnable companion projects for the 120-part TypeScript Full Mastery curriculum.
