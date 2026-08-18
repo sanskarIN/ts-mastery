@@ -58,6 +58,12 @@ scripts/         Repository-wide verification helpers
 - [`dependency-graph`](projects/dependency-graph/) — topological ordering and cycle detection
 - [`token-bucket-rate-limiter`](projects/token-bucket-rate-limiter/) — rate limiting with refillable tokens
 - [`geojson-guard`](projects/geojson-guard/) — runtime-safe GeoJSON Point validation
+- [`lru-cache`](projects/lru-cache/) — generic least-recently-used eviction cache
+- [`idempotency-store`](projects/idempotency-store/) — deduplicated request/job execution by key
+- [`command-bus`](projects/command-bus/) — strongly typed command dispatch
+- [`validation-pipeline`](projects/validation-pipeline/) — composable typed validation rules
+- [`priority-task-queue`](projects/priority-task-queue/) — stable priority scheduling queue
+- [`cursor-pagination`](projects/cursor-pagination/) — opaque cursor pagination for APIs
 
 ## Book ↔ code navigation
 
