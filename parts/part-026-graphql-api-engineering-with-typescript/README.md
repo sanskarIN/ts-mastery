@@ -11,9 +11,13 @@
 
 Use this folder for runnable TypeScript code, tests, exercises, concise setup notes, and links to larger companion projects related to this part. Keep the complete commercial chapter text, PDF/DOCX publication pages, private data, secrets, and unlicensed third-party assets out of the public repository.
 
+## Runnable companion project
+
+- [`cursor-pagination`](../../projects/cursor-pagination/) — generic connection/edge structures and opaque forward cursors suitable for GraphQL-style pagination exercises.
+
 ## Suggested code artifact
 
-Type-system/design exercise + tests.
+Wrap the cursor helper in a typed GraphQL connection resolver with filtering, authorization, and stable ordering.
 
 ---
 
