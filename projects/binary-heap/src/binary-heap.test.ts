@@ -16,9 +16,21 @@ test("supports custom object priorities", () => {
   assert.equal(heap.peek()?.id, "high");
 });
 
-test("empty heap operations are safe", () => {
+test("empty heap operations are safe and undefined can be a generic value", () => {
   const heap = new BinaryHeap<number>((a, b) => a - b);
   assert.equal(heap.peek(), undefined);
   assert.equal(heap.pop(), undefined);
   assert.equal(heap.size, 0);
+
+  const values = new BinaryHeap<number | undefined>((a, b) => {
+    const left = a ?? Number.POSITIVE_INFINITY;
+    const right = b ?? Number.POSITIVE_INFINITY;
+    return left - right;
+  });
+  values.push(undefined);
+  values.push(1);
+  assert.equal(values.pop(), 1);
+  assert.equal(values.size, 1);
+  assert.equal(values.pop(), undefined);
+  assert.equal(values.size, 0);
 });

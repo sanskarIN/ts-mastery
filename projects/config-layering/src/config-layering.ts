@@ -1,5 +1,14 @@
 export type ConfigLayer = Readonly<Record<string, unknown>>;
 
+function defineConfigValue(target: Record<string, unknown>, key: string, value: unknown): void {
+  Object.defineProperty(target, key, {
+    value,
+    enumerable: true,
+    configurable: true,
+    writable: true,
+  });
+}
+
 export function mergeConfigLayers(
   ...layers: readonly ConfigLayer[]
 ): Readonly<Record<string, unknown>> {
@@ -7,7 +16,7 @@ export function mergeConfigLayers(
   for (const layer of layers) {
     for (const [key, value] of Object.entries(layer)) {
       if (value !== undefined) {
-        result[key] = value;
+        defineConfigValue(result, key, value);
       }
     }
   }

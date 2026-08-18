@@ -11,9 +11,14 @@ test("later layers override earlier values without mutation", () => {
   assert.deepEqual(base, { region: "global", timeout: 100 });
 });
 
-test("undefined values do not erase previously defined configuration", () => {
-  const result = mergeConfigLayers({ a: 1 }, { a: undefined, b: 2 });
-  assert.deepEqual(result, { a: 1, b: 2 });
+test("undefined values do not erase earlier configuration and special keys stay data", () => {
+  const layer = JSON.parse('{"a":null,"__proto__":{"polluted":true}}') as Record<string, unknown>;
+  layer.a = undefined;
+  const result = mergeConfigLayers({ a: 1 }, layer, { b: 2 });
+  assert.equal(result.a, 1);
+  assert.equal(result.b, 2);
+  assert.deepEqual(result["__proto__"], { polluted: true });
+  assert.equal(({} as { polluted?: boolean }).polluted, undefined);
 });
 
 test("requireConfigKey narrows runtime configuration", () => {

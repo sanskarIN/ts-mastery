@@ -22,9 +22,10 @@ export class BinaryHeap<T> {
     if (this.items.length === 0) {
       return undefined;
     }
-    const top = this.items[0];
-    const last = this.items.pop();
-    if (this.items.length > 0 && last !== undefined) {
+
+    const top = this.items[0] as T;
+    const last = this.items.pop() as T;
+    if (this.items.length > 0) {
       this.items[0] = last;
       this.bubbleDown(0);
     }
@@ -35,9 +36,9 @@ export class BinaryHeap<T> {
     let current = index;
     while (current > 0) {
       const parent = Math.floor((current - 1) / 2);
-      const currentValue = this.items[current];
-      const parentValue = this.items[parent];
-      if (currentValue === undefined || parentValue === undefined || this.compare(currentValue, parentValue) >= 0) {
+      const currentValue = this.items[current] as T;
+      const parentValue = this.items[parent] as T;
+      if (this.compare(currentValue, parentValue) >= 0) {
         return;
       }
       [this.items[current], this.items[parent]] = [parentValue, currentValue];
@@ -52,27 +53,28 @@ export class BinaryHeap<T> {
       const right = left + 1;
       let best = current;
 
-      const bestValue = this.items[best];
-      const leftValue = this.items[left];
-      if (bestValue !== undefined && leftValue !== undefined && this.compare(leftValue, bestValue) < 0) {
-        best = left;
+      if (left < this.items.length) {
+        const leftValue = this.items[left] as T;
+        const bestValue = this.items[best] as T;
+        if (this.compare(leftValue, bestValue) < 0) {
+          best = left;
+        }
       }
 
-      const updatedBest = this.items[best];
-      const rightValue = this.items[right];
-      if (updatedBest !== undefined && rightValue !== undefined && this.compare(rightValue, updatedBest) < 0) {
-        best = right;
+      if (right < this.items.length) {
+        const rightValue = this.items[right] as T;
+        const bestValue = this.items[best] as T;
+        if (this.compare(rightValue, bestValue) < 0) {
+          best = right;
+        }
       }
 
       if (best === current) {
         return;
       }
 
-      const currentValue = this.items[current];
-      const nextValue = this.items[best];
-      if (currentValue === undefined || nextValue === undefined) {
-        return;
-      }
+      const currentValue = this.items[current] as T;
+      const nextValue = this.items[best] as T;
       [this.items[current], this.items[best]] = [nextValue, currentValue];
       current = best;
     }

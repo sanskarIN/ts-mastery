@@ -31,10 +31,11 @@ export class TypedEventBus<Events extends object> {
     const listeners = this.listeners.get(event);
     if (!listeners) return 0;
 
-    for (const listener of [...listeners]) {
+    const snapshot = [...listeners];
+    for (const listener of snapshot) {
       listener(payload);
     }
-    return listeners.size;
+    return snapshot.length;
   }
 
   listenerCount<K extends keyof Events>(event: K): number {

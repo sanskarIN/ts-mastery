@@ -22,10 +22,17 @@ test("evicts the least recently used key", () => {
   assert.equal(memo.has("c"), true);
 });
 
-test("supports cached undefined values", () => {
+test("supports undefined values and undefined keys without breaking eviction", () => {
   const memo = new BoundedMemoizer<string, undefined>(1);
   let calls = 0;
   memo.getOrCompute("x", () => { calls += 1; return undefined; });
   memo.getOrCompute("x", () => { calls += 1; return undefined; });
   assert.equal(calls, 1);
+
+  const keyed = new BoundedMemoizer<string | undefined, number>(1);
+  keyed.getOrCompute(undefined, () => 1);
+  keyed.getOrCompute("next", () => 2);
+  assert.equal(keyed.size, 1);
+  assert.equal(keyed.has(undefined), false);
+  assert.equal(keyed.has("next"), true);
 });

@@ -18,12 +18,12 @@ test('emits typed payloads and unsubscribes listeners', () => {
   assert.deepEqual(received, [42]);
 });
 
-test('once listeners run exactly once', () => {
+test('once listeners run exactly once and emit reports invoked listeners', () => {
   const bus = new TypedEventBus<Events>();
   const received: string[] = [];
   bus.once('message', (message) => received.push(message));
 
-  bus.emit('message', 'first');
-  bus.emit('message', 'second');
+  assert.equal(bus.emit('message', 'first'), 1);
+  assert.equal(bus.emit('message', 'second'), 0);
   assert.deepEqual(received, ['first']);
 });

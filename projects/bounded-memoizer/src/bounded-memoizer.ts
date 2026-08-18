@@ -35,11 +35,11 @@ export class BoundedMemoizer<K, V> {
 
   private evict(): void {
     while (this.cache.size > this.capacity) {
-      const oldest = this.cache.keys().next().value as K | undefined;
-      if (oldest === undefined) {
+      const oldest = this.cache.keys().next();
+      if (oldest.done) {
         return;
       }
-      this.cache.delete(oldest);
+      this.cache.delete(oldest.value);
     }
   }
 }

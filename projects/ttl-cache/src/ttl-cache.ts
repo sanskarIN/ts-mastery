@@ -28,7 +28,13 @@ export class TtlCache<K, V> {
   }
 
   has(key: K): boolean {
-    return this.get(key) !== undefined;
+    const entry = this.entries.get(key);
+    if (!entry) return false;
+    if (entry.expiresAt <= this.now()) {
+      this.entries.delete(key);
+      return false;
+    }
+    return true;
   }
 
   delete(key: K): boolean {

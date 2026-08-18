@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { TtlCache } from './ttl-cache.js';
 
-test('returns values before expiry and removes them after expiry', () => {
+test('returns values before expiry, supports undefined values, and removes expired entries', () => {
   let now = 1_000;
   const cache = new TtlCache<string, number>(() => now);
   cache.set('answer', 42, 100);
@@ -11,6 +11,13 @@ test('returns values before expiry and removes them after expiry', () => {
   now = 1_100;
   assert.equal(cache.get('answer'), undefined);
   assert.equal(cache.size, 0);
+
+  const undefinedCache = new TtlCache<string, undefined>(() => now);
+  undefinedCache.set('present', undefined, 100);
+  assert.equal(undefinedCache.get('present'), undefined);
+  assert.equal(undefinedCache.has('present'), true);
+  now = 1_200;
+  assert.equal(undefinedCache.has('present'), false);
 });
 
 test('sweep removes all expired entries', () => {
