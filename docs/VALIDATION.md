@@ -2,47 +2,65 @@
 
 > **📘 Complete TypeScript Full Mastery eBook:** **https://ramsandesh.gumroad.com**
 
-The companion repository is checked with strict TypeScript compilation plus the Node.js test runner.
+The companion repository is checked with repository-structure validation, strict TypeScript compilation, the Node.js test runner, and GitHub Actions.
 
-## First expanded-project validation
+## Validation milestones
 
-After adding eight additional companion projects, the complete runnable collection was validated together with the existing examples and projects.
+### Initial runnable package
 
+- Automated tests: **9 passed, 0 failed**
+
+### First project expansion
+
+- Complete automated suite at that milestone: **29 passed, 0 failed**
 - Strict TypeScript check: **passed**
-- TypeScript build: **passed**
-- Automated tests: **29 passed, 0 failed**
-- Node.js used for validation: **v22.16.0**
-- TypeScript compiler used for validation: **5.8.3**
+- Build: **passed**
 
-## Second expanded-project validation
-
-The next six projects were compiled and tested under the same strict compiler options, including `noUncheckedIndexedAccess` and `exactOptionalPropertyTypes`.
+### Second project expansion
 
 - New projects: **6**
 - New automated tests: **18 passed, 0 failed**
-- New-batch strict TypeScript check: **passed**
-- New-batch build: **passed**
-- One `exactOptionalPropertyTypes` issue in the cursor-pagination test was detected during validation and fixed before this record was updated.
+- Strict TypeScript check: **passed**
+- Build: **passed**
+- One `exactOptionalPropertyTypes` issue in cursor-pagination test code was detected and fixed before completion.
 
-Newly validated areas:
+### Third project expansion
 
-- least-recently-used caching
-- idempotent operation deduplication
-- typed command dispatch
-- composable validation pipelines
-- stable priority scheduling
-- cursor-based API pagination
+New projects:
 
-The repository now contains **3 focused examples and 17 larger companion projects**. The current expected total automated-test count is **47** when the previous 29-test suite and this 18-test expansion are run together.
+- bulkhead concurrency limiter
+- in-memory outbox store
+- typed middleware pipeline
+- bounding-box utilities
+- health-check aggregator
+- DAG task runner
 
-For a normal clone, install the declared development dependencies first, then run:
+Validation result:
+
+- New automated tests: **18 passed, 0 failed**
+- Strict TypeScript compilation: **passed**
+- Build: **passed**
+- Node.js validation runtime: **v22.16.0**
+- TypeScript validation compiler: **5.8.3**
+
+During testing, a bulkhead lifecycle issue was detected: the public promise could resolve immediately before the internal active-capacity counter was released. The implementation was changed so capacity is released and queued work is pumped before callers observe resolution/rejection.
+
+## Current repository scale
+
+- Focused runnable examples: **3**
+- Larger companion projects: **23**
+- Runnable groups in catalog: **26**
+- Expected complete automated-test count: **65**
+- Part-navigation folders: **120**
+
+## Standard verification
 
 ```bash
 npm install
 npm run verify
 ```
 
-The repository CI performs the same repository-level verification command on pushes and pull requests.
+`npm run verify` now validates repository structure/catalog paths, strict TypeScript types, build output, and automated tests. GitHub Actions runs it on Node.js 20 and 22.
 
 ---
 
