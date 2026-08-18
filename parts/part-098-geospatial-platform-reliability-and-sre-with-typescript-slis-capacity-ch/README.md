@@ -11,9 +11,15 @@
 
 Use this folder for runnable TypeScript code, tests, exercises, concise setup notes, and links to larger companion projects related to this part. Keep the complete commercial chapter text, PDF/DOCX publication pages, private data, secrets, and unlicensed third-party assets out of the public repository.
 
+## Runnable reliability projects
+
+- [`retry-policy`](../../projects/retry-policy/) — bounded retries and exponential backoff.
+- [`circuit-breaker`](../../projects/circuit-breaker/) — open, half-open, and closed resilience states.
+- [`token-bucket-rate-limiter`](../../projects/token-bucket-rate-limiter/) — deterministic capacity protection and refill behavior.
+
 ## Suggested code artifact
 
-Geospatial/data pipeline companion module.
+Combine the resilience primitives into a simulated service client and measure retry amplification, blocked calls, and rate-limiter decisions.
 
 ---
 
