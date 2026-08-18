@@ -16,10 +16,12 @@ Use this folder for runnable TypeScript code, tests, exercises, concise setup no
 - [`retry-policy`](../../projects/retry-policy/) — bounded retries and exponential backoff.
 - [`circuit-breaker`](../../projects/circuit-breaker/) — open, half-open, and closed resilience states.
 - [`token-bucket-rate-limiter`](../../projects/token-bucket-rate-limiter/) — deterministic capacity protection and refill behavior.
+- [`bulkhead-limiter`](../../projects/bulkhead-limiter/) — bound concurrent work and reject overload when a queue is full.
+- [`health-check-aggregator`](../../projects/health-check-aggregator/) — combine service checks into `up`, `degraded`, and `down` readiness states.
 
 ## Suggested code artifact
 
-Combine the resilience primitives into a simulated service client and measure retry amplification, blocked calls, and rate-limiter decisions.
+Compose the resilience primitives into a simulated production service and measure retries, rejected overload, circuit state, health status, and capacity decisions.
 
 ---
 
