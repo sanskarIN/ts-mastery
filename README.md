@@ -2,6 +2,8 @@
 
 A public companion-code repository for the **TypeScript Full Mastery — Complete 120-Part Master Edition** by **Ram Sandesh**.
 
+[![Official Gumroad Store](assets/gumroad-store-banner.svg)](https://ramsandesh.gumroad.com)
+
 > ## 📘 Get the Complete TypeScript Full Mastery eBook
 > **Gumroad Store:** **https://ramsandesh.gumroad.com**
 >
@@ -28,10 +30,10 @@ This repository is intentionally focused on **source code, exercises, small reus
 
 ```bash
 npm install
-npm run check
-npm test
-npm run build
+npm run verify
 ```
+
+`npm run verify` checks the 120-part repository structure, strict TypeScript compilation, the project build, and automated tests.
 
 Node.js and TypeScript versions change over time. Use a currently supported Node.js release and install the development dependencies declared in `package.json`.
 
@@ -41,11 +43,14 @@ Node.js and TypeScript versions change over time. Use a currently supported Node
 examples/        Small focused examples
 projects/        Larger runnable companion projects
 parts/           Part-by-part navigation for Parts 001–120
-docs/            Book-to-repository policy, code catalog, and contribution notes
+docs/            Book-to-repository policy, project matrix, catalog, and contribution notes
 scripts/         Repository-wide verification helpers
+assets/          Repository-owned visual assets
 ```
 
 ## Runnable companion projects
+
+See the dedicated [`projects/README.md`](projects/README.md) landing page and [`docs/PROJECT_MATRIX.md`](docs/PROJECT_MATRIX.md) curriculum map.
 
 - [`study-progress-cli`](projects/study-progress-cli/) — study progress domain and CLI
 - [`runtime-config`](projects/runtime-config/) — runtime environment validation
@@ -80,13 +85,13 @@ These are deliberately separate. Publishing code under MIT does **not** place th
 
 ## Quality rule
 
-Every code contribution should aim to pass:
+Every code contribution should pass:
 
 ```bash
-npm run check
-npm test
-npm run build
+npm run verify
 ```
+
+GitHub Actions runs the same verification across the supported Node.js CI matrix.
 
 ## Security
 
