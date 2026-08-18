@@ -7,10 +7,12 @@
   "scripts": {
     "clean": "node scripts/clean.mjs",
     "check": "tsc -p tsconfig.json --noEmit",
-    "build": "tsc -p tsconfig.json",
-    "test": "npm run build && node --test dist/**/*.test.js",
+    "build": "npm run clean && tsc -p tsconfig.json",
+    "test": "npm run build && node scripts/run-tests.mjs",
     "verify:structure": "node scripts/verify-structure.mjs",
-    "verify": "npm run verify:structure && npm run check && npm test"
+    "verify:docs": "node scripts/verify-docs.mjs",
+    "stats": "node scripts/report-stats.mjs",
+    "verify": "npm run verify:structure && npm run verify:docs && npm run check && npm test"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",

@@ -1,0 +1,35 @@
+name: Documentation issue
+description: Report unclear, outdated, or broken public repository documentation.
+title: "[Docs]: "
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Documentation area
+      options:
+        - Getting started / setup
+        - API reference
+        - Project / curriculum navigation
+        - Build / testing
+        - Troubleshooting
+        - Security / maintenance / release
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: path
+    attributes:
+      label: File or path
+      placeholder: docs/GETTING_STARTED.md
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong or unclear?
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested correction

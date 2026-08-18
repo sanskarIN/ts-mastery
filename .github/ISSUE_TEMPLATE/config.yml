@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Complete TypeScript Full Mastery eBook
+    url: https://ramsandesh.gumroad.com
+    about: Official storefront for the complete commercial eBook.
+  - name: Security policy
+    url: https://github.com/sanskarIN/ts-mastery/security
+    about: Review security-reporting options before publishing sensitive details.
