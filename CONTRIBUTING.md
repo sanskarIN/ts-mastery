@@ -4,14 +4,17 @@
 
 Contributions are welcome for companion **code** and code-related documentation. The complete commercial eBook and publication releases are available through the official Gumroad storefront: **https://ramsandesh.gumroad.com**.
 
+Read [`docs/PROJECT_STANDARDS.md`](docs/PROJECT_STANDARDS.md) before adding or substantially changing a companion project.
+
 ## Before opening a pull request
 
 1. Keep the change tied to a specific TypeScript concept or book part.
 2. Do not copy large passages from the commercial book into the repository.
-3. Add or update tests when behavior changes.
-4. Keep `strict` TypeScript enabled.
+3. Add or update meaningful tests when behavior changes.
+4. Keep `strict` TypeScript enabled and respect all repository compiler checks.
 5. Avoid committing generated `dist/`, credentials, secrets, private data, or machine-specific files.
-6. Run:
+6. Update project/catalog/navigation documentation when a new runnable group is added.
+7. Run:
 
 ```bash
 npm run verify
@@ -22,6 +25,18 @@ npm run verify
 - Small single-concept example → `examples/`
 - Multi-file application or capstone → `projects/`
 - Navigation/notes tied to a book part → `parts/part-XXX-*/`
+
+## New project checklist
+
+A new project normally needs:
+
+- source implementation;
+- automated tests;
+- project README;
+- entry in `projects/README.md`;
+- entry in `docs/PROJECT_MATRIX.md`;
+- entry in `docs/code-catalog.json`;
+- direct part link where the project strongly matches a curriculum section.
 
 ## Pull request description
 
