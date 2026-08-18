@@ -15,10 +15,13 @@ test("encodes and decodes cursor offsets", () => {
 test("paginates forward from an end cursor", () => {
   const items = ["a", "b", "c", "d", "e"];
   const first = paginate(items, { first: 2 });
-  const second = paginate(items, {
-    first: 2,
-    after: first.pageInfo.endCursor ?? undefined,
-  });
+  const cursor = first.pageInfo.endCursor;
+  assert.notEqual(cursor, null);
+  if (cursor === null) {
+    throw new Error("expected a cursor for a non-empty page");
+  }
+
+  const second = paginate(items, { first: 2, after: cursor });
 
   assert.deepEqual(first.edges.map((edge) => edge.node), ["a", "b"]);
   assert.deepEqual(second.edges.map((edge) => edge.node), ["c", "d"]);
