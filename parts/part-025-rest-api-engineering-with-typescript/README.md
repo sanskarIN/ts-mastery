@@ -11,13 +11,14 @@
 
 Use this folder for runnable TypeScript code, tests, exercises, concise setup notes, and links to larger companion projects related to this part. Keep the complete commercial chapter text, PDF/DOCX publication pages, private data, secrets, and unlicensed third-party assets out of the public repository.
 
-## Runnable companion project
+## Runnable companion projects
 
 - [`cursor-pagination`](../../projects/cursor-pagination/) — opaque cursor encoding, safe decoding, and forward pagination for API collections.
+- [`middleware-pipeline`](../../projects/middleware-pipeline/) — typed request-pipeline composition with deterministic middleware ordering and double-`next()` protection.
 
 ## Suggested code artifact
 
-Extend cursor pagination with filtering, sorting, request validation, or a REST response envelope without exposing database offsets directly.
+Build a tiny REST adapter that combines request middleware, validation, cursor pagination, and a consistent typed response envelope.
 
 ---
 
