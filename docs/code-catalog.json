@@ -26,16 +26,25 @@
     { "path": "projects/command-bus", "purpose": "Strongly typed command registration and async dispatch" },
     { "path": "projects/validation-pipeline", "purpose": "Composable validation rules with typed success/failure results" },
     { "path": "projects/priority-task-queue", "purpose": "Stable priority scheduling for workers and orchestration" },
-    { "path": "projects/cursor-pagination", "purpose": "Opaque cursor encoding and forward API pagination" }
+    { "path": "projects/cursor-pagination", "purpose": "Opaque cursor encoding and forward API pagination" },
+    { "path": "projects/bulkhead-limiter", "purpose": "Concurrency isolation, bounded queues, and overload rejection" },
+    { "path": "projects/outbox-store", "purpose": "Reliable messaging outbox records and publication tracking" },
+    { "path": "projects/middleware-pipeline", "purpose": "Typed asynchronous middleware composition and ordering" },
+    { "path": "projects/bounding-box", "purpose": "Validated geospatial bounds, containment, intersection and expansion" },
+    { "path": "projects/health-check-aggregator", "purpose": "Typed up/degraded/down readiness aggregation" },
+    { "path": "projects/dag-task-runner", "purpose": "Dependency-aware task execution with cycle detection" }
   ],
   "validation": {
     "initialAutomatedTestsPassed": 9,
-    "previousAutomatedTestsPassed": 29,
-    "newBatchAutomatedTestsPassed": 18,
-    "newBatchAutomatedTestsFailed": 0,
-    "expectedRepositoryTestCount": 47,
+    "firstExpandedSuiteTestsPassed": 29,
+    "secondBatchAutomatedTestsPassed": 18,
+    "thirdBatchAutomatedTestsPassed": 18,
+    "thirdBatchAutomatedTestsFailed": 0,
+    "expectedRepositoryTestCount": 65,
     "strictTypeScript": true,
-    "newBatchStrictTypeScriptCheckPassed": true,
-    "newBatchBuildPassed": true
+    "secondBatchStrictTypeScriptCheckPassed": true,
+    "thirdBatchStrictTypeScriptCheckPassed": true,
+    "thirdBatchBuildPassed": true,
+    "thirdBatchBugFixedDuringValidation": "bulkhead capacity cleanup now occurs before caller promise resolution"
   }
 }
