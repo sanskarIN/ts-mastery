@@ -43,12 +43,25 @@ Examples:
 
 ## Currently runnable companion groups
 
+### Focused examples
+
 - [`examples/01-foundations`](../examples/01-foundations/)
 - [`examples/02-type-design`](../examples/02-type-design/)
 - [`examples/03-async-control`](../examples/03-async-control/)
+
+### Companion projects
+
 - [`projects/study-progress-cli`](../projects/study-progress-cli/)
 - [`projects/runtime-config`](../projects/runtime-config/)
 - [`projects/workflow-state-machine`](../projects/workflow-state-machine/)
+- [`projects/typed-event-bus`](../projects/typed-event-bus/)
+- [`projects/ttl-cache`](../projects/ttl-cache/)
+- [`projects/retry-policy`](../projects/retry-policy/)
+- [`projects/circuit-breaker`](../projects/circuit-breaker/)
+- [`projects/feature-flags`](../projects/feature-flags/)
+- [`projects/dependency-graph`](../projects/dependency-graph/)
+- [`projects/token-bucket-rate-limiter`](../projects/token-bucket-rate-limiter/)
+- [`projects/geojson-guard`](../projects/geojson-guard/)
 
 The part folders are intentionally lightweight navigation anchors. Larger runnable projects should live under `examples/` or `projects/` and be linked from the relevant part folder rather than duplicating the same source tree many times.
 
