@@ -11,13 +11,14 @@
 
 Use this folder for runnable TypeScript code, tests, exercises, concise setup notes, and links to larger companion projects related to this part. Keep the complete commercial chapter text, PDF/DOCX publication pages, private data, secrets, and unlicensed third-party assets out of the public repository.
 
-## Runnable companion project
+## Runnable companion projects
 
 - [`geojson-guard`](../../projects/geojson-guard/) — runtime validation of unknown GeoJSON Point Feature input, coordinate bounds, and safe narrowing.
+- [`bounding-box`](../../projects/bounding-box/) — validated bounds, point containment, box intersection, expansion, and bounds-from-points utilities.
 
 ## Suggested code artifact
 
-Extend the guard with LineString, Polygon, bbox validation, and structured validation errors while retaining `unknown` at the trust boundary.
+Combine GeoJSON validation with computed bounding boxes, then extend the guard with LineString/Polygon support and structured validation errors.
 
 ---
 
