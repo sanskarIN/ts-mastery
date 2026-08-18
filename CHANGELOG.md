@@ -4,6 +4,19 @@
 
 All notable changes to the public companion-code repository are documented here.
 
+## Companion project expansion
+
+- Added a strongly typed event bus with subscription and one-shot listener tests.
+- Added a deterministic TTL cache with expiry and sweeping behavior.
+- Added a reusable retry policy with bounded attempts and exponential backoff.
+- Added a circuit breaker with closed, open, and half-open transitions.
+- Added deterministic percentage-based feature flags.
+- Added dependency graph ordering and cycle detection.
+- Added a token-bucket rate limiter with injectable time.
+- Added a GeoJSON Point Feature runtime guard for safe `unknown` narrowing.
+- Linked the new projects from relevant TypeScript Full Mastery part-navigation pages.
+- Expanded repository verification to **29 passing automated tests** with strict TypeScript compilation.
+
 ## Storefront visibility update
 
 - Highlighted the official Gumroad storefront across the main repository landing page.
