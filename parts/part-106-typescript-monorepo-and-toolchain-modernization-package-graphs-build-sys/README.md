@@ -11,9 +11,13 @@
 
 Use this folder for runnable TypeScript code, tests, exercises, concise setup notes, and links to larger companion projects related to this part. Keep the complete commercial chapter text, PDF/DOCX publication pages, private data, secrets, and unlicensed third-party assets out of the public repository.
 
+## Runnable companion project
+
+- [`dependency-graph`](../../projects/dependency-graph/) — deterministic package/dependency ordering and explicit cycle detection.
+
 ## Suggested code artifact
 
-Enterprise platform/reliability simulation or architecture-as-code example.
+Extend the graph with affected-package calculation, parallel build layers, or incremental invalidation for monorepo build planning.
 
 ---
 
