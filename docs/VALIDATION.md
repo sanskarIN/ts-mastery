@@ -4,30 +4,36 @@
 
 The companion repository is checked with strict TypeScript compilation plus the Node.js test runner.
 
-## Expanded project validation
+## First expanded-project validation
 
 After adding eight additional companion projects, the complete runnable collection was validated together with the existing examples and projects.
 
 - Strict TypeScript check: **passed**
 - TypeScript build: **passed**
 - Automated tests: **29 passed, 0 failed**
-- Node.js used for the local validation: **v22.16.0**
-- TypeScript compiler available in the validation environment: **5.8.3**
+- Node.js used for validation: **v22.16.0**
+- TypeScript compiler used for validation: **5.8.3**
 
-Validated areas include:
+## Second expanded-project validation
 
-- foundations and type design
-- bounded async control
-- study progress and runtime configuration
-- workflow state transitions
-- typed event routing
-- TTL caching
-- retry/backoff behavior
-- circuit-breaker transitions
-- deterministic feature flags
-- dependency graph ordering and cycle detection
-- token-bucket rate limiting
-- GeoJSON runtime validation
+The next six projects were compiled and tested under the same strict compiler options, including `noUncheckedIndexedAccess` and `exactOptionalPropertyTypes`.
+
+- New projects: **6**
+- New automated tests: **18 passed, 0 failed**
+- New-batch strict TypeScript check: **passed**
+- New-batch build: **passed**
+- One `exactOptionalPropertyTypes` issue in the cursor-pagination test was detected during validation and fixed before this record was updated.
+
+Newly validated areas:
+
+- least-recently-used caching
+- idempotent operation deduplication
+- typed command dispatch
+- composable validation pipelines
+- stable priority scheduling
+- cursor-based API pagination
+
+The repository now contains **3 focused examples and 17 larger companion projects**. The current expected total automated-test count is **47** when the previous 29-test suite and this 18-test expansion are run together.
 
 For a normal clone, install the declared development dependencies first, then run:
 
